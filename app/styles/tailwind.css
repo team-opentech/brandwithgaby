@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* ... */
+  h1 {
+    @apply text-[45px] leading-[59px] tracking-wider font-normal font-Bricolage-Grotesque;
+    @media screen and (max-width: 1024px){
+      @apply text-[40px] leading-[59px] tracking-wider font-normal font-Bricolage-Grotesque;
+    }
+  };
+  h2{
+    @apply text-[36px] leading-[36px] tracking-wider font-normal font-Bricolage-Grotesque;
+  };
+
+    h3{
+        @apply text-[26px] leading-[25px] tracking-wider font-normal font-Bricolage-Grotesque;
+    };
+
+    h4{
+        @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter;
+    };
+
+    h5{
+        @apply text-[18px] leading-[25px] tracking-wider font-normal font-Bricolage-Grotesque;
+    };
+
+    h6{
+        @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
+    };
+}
