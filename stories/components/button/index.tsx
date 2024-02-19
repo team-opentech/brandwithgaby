@@ -6,7 +6,7 @@ interface ButtonProps {
 
 export const Button = ({styles, label, ...props}: ButtonProps) => {
   return (
-    <button className={styles} {...props}>
+    <button onClick={props.onClick} className={styles} {...props}>
       {label}
     </button>
   );
