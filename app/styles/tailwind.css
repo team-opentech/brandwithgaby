@@ -6,6 +6,9 @@
   /* ... */
   h1 {
     @apply text-[45px] leading-[59px] tracking-wider font-normal font-Bricolage-Grotesque;
+    @media screen and (max-width: 1024px){
+      @apply text-[40px] leading-[59px] tracking-wider font-normal font-Bricolage-Grotesque;
+    }
   };
   h2{
     @apply text-[36px] leading-[36px] tracking-wider font-normal font-Bricolage-Grotesque;
