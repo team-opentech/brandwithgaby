@@ -26,4 +26,7 @@
     h6{
         @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
     };
+    p{
+       @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
+    };
 }
