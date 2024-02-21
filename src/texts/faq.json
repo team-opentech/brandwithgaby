@@ -1,0 +1,96 @@
+{
+  "FAQ": [
+    {
+      "question": "¿Cómo saber si este producto es para mí?",
+      "answer": "Este producto ha sido diseñado pensando en aquellos que están dando sus primeros pasos en su personal branding o en el desarrollo de una pequeña marca. Si te identificas con roles como;",
+      "list": [
+        "Makeup Artist, Beauty Influencers",
+        "Fashion Stylists, Realtors",
+        "Wellness Coaches",
+        "Coach de Negocios",
+        "Fitness Instructors",
+        "Agentes de Seguros",
+        "Motivational Speakers",
+        "Lifestyle Bloggers",
+        "Podcaster",
+        "Emprendimientos desde Casa",
+        "Servicios Locales",
+        "Joyería Artesanal",
+        "Productos Orgánicos Locales",
+        "Productos de Belleza Natural",
+        "Creadores Artesanales, Arte y Manualidades Locales",
+        "Snacks Saludables",
+        "Alimentos Gourmet Locales"
+      ],
+      "afterAnswer": "Aunque esta lista es un buen punto de partida, no es limitante; estamos abiertos a atender diversas marcas y proyectos. Sin embargo, si no encuentras tu categoría aquí, podría indicar que tu marca está lista para un salto más grande, y tal vez necesitas una estrategia de branding más avanzada. En este caso, te recomendamos explorar opciones más personalizadas y adecuadas para ti con nuestro equipo en ",
+      "link": {
+        "text": "hello@arquetipo.us",
+        "url": "mailto:hello@arquetipo.us"
+      }
+    },
+    {
+        "question": "¿Luego de comprar mi producto qué sigue?",
+        "answer": "¡Después de comprar tu producto, aquí está lo que sigue!",
+        "list": [
+            "Confirmación de la orden.",
+            "Recibes un email con 2 pasos para comenzar. Completas un formulario breve. Agendas una reunión Zoom de 30 minutos.",
+            "Desarrollamos tu propuesta de logo en 7 días hábiles.",
+            "Revisas y eliges tu logo favorito.",
+            "Aprobamos el logo y creamos los Brand Guidelines.",
+            "Recibes el Brand Kit completo.",
+            "Piezas Gráficas: Creamos 3 piezas de diseño personalizadas, como tarjetas de presentación o etiquetas. Se adaptarán según tu rubro o necesidad específica. Para piezas más elaboradas, como menús o packaging, se presupuestará por separado."
+        ],
+        "afterAnswer": "",
+        "link": {}
+      },
+      {
+        "question": "¿Qué sucede durante la reunión inicial por Zoom?",
+        "answer": "En la reunión inicial discutimos tus objetivos, visión de marca y recopilamos información esencial. Es una fase crucial para entender tus necesidades.",
+        "list": [],
+        "afterAnswer": "",
+        "link": {}
+      },
+      {
+        "question": "¿Cuánto tiempo lleva completar el proceso de branding?",
+        "answer": "Estimamos alrededor de 2 semanas para completar el proceso, dependiendo de la colaboración y respuesta del cliente.",
+        "list": [],
+        "afterAnswer": "",
+        "link": {}
+      },
+      {
+        "question": "¿Cuántas revisiones puedo hacer durante el proceso de diseño?",
+        "answer": "Se permiten dos rondas de revisiones para asegurar que tu marca sea perfecta. Una vez aprobado, avanzamos a la siguiente fase.",
+        "list": [],
+        "afterAnswer": "",
+        "link": {}
+      },
+      {
+        "question": "¿Cómo funciona la fase del website?",
+        "answer": "",
+        "list": [
+            "Reunión de Planificación: Agendaremos una nueva reunión para definir las secciones clave de tu landing page. Generalmente, incluimos entre 4 y 5 secciones en una misma página.",
+            "Formulario de Contenido: Te proporcionaremos un formulario para completar. Aquí nos darás información esencial como frases clave, detalles sobre tu marca y la información de contacto que deseas incluir en el website.",
+            "Imágenes: Como mencionamos anteriormente, las imágenes pueden provenir de tu material fotográfico o de nuestro banco de imágenes en caso de no contar con material propio.",
+            "Contenido y Diseño: Con la información que nos proporcionaste, desarrollaremos el contenido y diseño de tu landing page, manteniendo una coherencia perfecta con tu marca.",
+            "Revisión y Ajustes: Te enviaremos una versión preliminar de tu landing page para que la revises. Estamos abiertos a realizar ajustes según tus comentarios.",
+            "Dominio y Hospedaje: Es importante destacar que el precio del servicio no incluye el dominio ni el hospedaje. Te daremos recomendaciones sobre dónde adquirirlos y, si lo necesitas, te apoyaremos en el proceso de compra."
+        ],
+        "afterAnswer": "",
+        "link": {}
+      },
+      {
+        "question": "¿Qué sucede si mi proyecto necesita más que el paquete básico?",
+        "answer": "Para proyectos más avanzados, te recomendamos contactar a nuestra empresa aliada, Arquetipo, para soluciones personalizadas.",
+        "list": [],
+        "afterAnswer": "",
+        "link": {}
+      },
+      {
+        "question": "¿Cómo se manejan los pagos?",
+        "answer": "Los pagos se realizan en USD y ofrecemos AfterPay para opciones de pago en cuotas.",
+        "list": [],
+        "afterAnswer": "",
+        "link": {}
+      }
+  ]
+}
