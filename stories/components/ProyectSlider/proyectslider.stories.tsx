@@ -1,11 +1,11 @@
 import type {Meta, StoryObj} from '@storybook/react';
 
-import {BannerSlider} from './';
+import {ProyectSlider} from './';
 
 const meta = {
   title: 'component/ProyectSlider',
-  component: BannerSlider,
-} satisfies Meta<typeof BannerSlider>;
+  component: ProyectSlider,
+} satisfies Meta<typeof ProyectSlider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
