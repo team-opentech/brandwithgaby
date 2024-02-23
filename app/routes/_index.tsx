@@ -12,6 +12,7 @@ import {ServiceCard} from '../../stories/components/ServiceCard';
 import {InfoCard} from '../../stories/components/InfoCard';
 import {ProyectSlider} from '../../stories/components/ProyectSlider';
 import {Button} from '../../stories/components/button';
+import Text from '../../src/texts/landing.json';
 
 export const meta: MetaFunction = () => {
   return [{title: 'Brand with Gaby'}];
@@ -125,7 +126,7 @@ export default function Homepage() {
 
   const data = useLoaderData<typeof loader>();
   return (
-    <div className="w-full h-full p-0">
+    <div className="w-screen h-full p-0 overscroll-x-none overflow-hidden">
       <BannerSlider
         images={[
           '/banner02.webp',
@@ -246,79 +247,41 @@ export default function Homepage() {
             ]}
           />
           <ServiceCard
-            title="Kickstar"
-            subtitle="Branding Package"
-            price="1,980.00"
-            time="¡Pack listo en 2 semanas!"
+            title="LaunchBoost"
+            subtitle="Branding + Landing Page Package"
+            price="3,800.00"
+            time="¡Pack listo en 4 semanas!"
             servicesList={[
-              '30-Min Zoom Meeting',
-              'Branding',
+              '30-Min Zoom Meeting Branding',
               'Logo',
               'Brand Guidelines',
+              '30-Min Zoom Meeting Landing Page',
+              'Landing Page',
             ]}
-            dues="o 4 cuotas de $495.00 with afterpay"
+            dues="o 4 cuotas de $950.00 with afterpay"
             include={[
               {
-                title: '2 Opciones de logo.',
+                title: 'Website Consultation.',
                 description: '',
               },
               {
-                title: '2 Rondas de revisiones de logo',
+                title: 'Vistas previas de estilo del sitio web.',
                 description: '',
               },
               {
-                title: 'Brand Guidelines PDF:',
-                description:
-                  'Concepto de estilo de marca con logo, tipografías, colores.',
+                title: 'Refinamiento y aprobación',
+                description: '',
               },
               {
-                title: '3 piezas de diseño a definir.',
+                title: 'Lanzamiento: tu marca on line. ',
                 description:
-                  '(business cards, thank you card, stickers, etiquetas, hojas membretadas, artes sencillos).',
-              },
-              {
-                title: 'Social Media Assets:',
-                description:
-                  'Logo para perfil, cover para Facebook, Youtube o Linkedin.',
-              },
-              {
-                title: 'Entrega de Brand Kit:',
-                description:
-                  'Logo, tipografía y piezas de diseños en archivos editables.',
+                  'El dominio y hospedaje corre por parte del cliente.',
               },
             ]}
           />
         </div>
       </div>
-      <Marquesina
-        text={[
-          'Your dream brand with me!',
-          'Believe in your project',
-          'Stunning Design',
-          'Empower Your Dreams',
-          'Unlock Your Potential',
-          'Your dream brand with me!',
-          'Believe in your project',
-          'Stunning Design',
-          'Empower Your Dreams',
-          'Unlock Your Potential',
-          'Your dream brand with me!',
-          'Believe in your project',
-          'Stunning Design',
-          'Empower Your Dreams',
-          'Unlock Your Potential',
-          'Your dream brand with me!',
-          'Believe in your project',
-          'Stunning Design',
-          'Empower Your Dreams',
-          'Unlock Your Potential',
-          'Your dream brand with me!',
-          'Believe in your project',
-          'Stunning Design',
-          'Empower Your Dreams',
-          'Unlock Your Potential',
-        ]}
-      />
+      <Marquesina text={Text.marquee.titles} />
       <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[10px] flex-col justify-center items-center">
         <h2 className="text-center mt-[90px]">
           Create your dream brand with me!
@@ -329,8 +292,7 @@ export default function Homepage() {
         </p>
         <div className="h-full flex flex-col lg:flex-row lg:space-x-[80px] justify-center items-center">
           <InfoCard
-            title="Title"
-            left={false}
+            title="Este paquete SI es para ti, sí: "
             description={[
               'Si sueñas con una marca que refleje tu grandeza y brille con autenticidad.',
               'Perfecto para quienes comienzan su marca personal o para small brands que quieren establecer una identidad sólida desde el principio, creando la base para un crecimiento continuo.',
@@ -338,18 +300,19 @@ export default function Homepage() {
             ]}
           />
           <InfoCard
-            title="Title"
+            title="Este paquete NO es para ti, si: "
+            left={false}
             description={[
-              'Si sueñas con una marca que refleje tu grandeza y brille con autenticidad.',
-              'Perfecto para quienes comienzan su marca personal o para small brands que quieren establecer una identidad sólida desde el principio, creando la base para un crecimiento continuo.',
-              'Si estás en la búsqueda de un precio accesible sin sacrificar la calidad del diseño, este paquete ofrece un equilibrio perfecto entre asequibilidad y excelencia creativa.',
+              'Te gusta vivir en la procrastinación y no te importa la imagen que proyecta tu marca y cómo te ven tus clientes.',
+              'Si no estás dispuesto a invertir en el desarrollo y fortalecimiento de tu marca.',
+              'Si tu proyecto es más grande y necesita estrategias de branding más avanzadas y personalizadas. Te sugerimos explorar nuestras soluciones especializadas con nuestro Big Boss en arquetipo.us',
             ]}
           />
         </div>
       </div>
       <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] flex-col justify-center items-center">
         <img src="/Q&A-logo.svg" alt="no-source" />
-        <p className="underline">Preguntas frecuentes</p>
+        <p className="underline cursor-pointer">Preguntas frecuentes</p>
       </div>
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">

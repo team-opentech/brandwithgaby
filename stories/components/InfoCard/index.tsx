@@ -3,24 +3,33 @@ interface InfoCardProps {
   description: string[];
   left?: boolean;
 }
-export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
+export const InfoCard = ({
+  title,
+  description,
+  left = true,
+}: InfoCardProps) => {
   return (
-    <div className="flex flex-col w-full h-auto 2xl:max-w-[522px] justify-center items-center">
+    <div className="flex flex-col w-full h-full 2xl:max-w-[522px]">
       <div
         className={`flex flex-col items-center justify-center w-full h-auto rounded-[15px] py-[2%] ${
-          left ? 'bg-black text-white' : 'bg-[#EBECE7] text-black'
+          left ? "bg-black text-white" : "bg-[#EBECE7] text-black"
         }`}
       >
         <h3>{title}</h3>
       </div>
-      <div className="flex flex-col w-[90%] items-center space-y-8 my-12">
+      <div className="flex flex-col w-[90%] items-center justify-center space-y-8 my-12 mx-auto">
         {description.map((desc, index) => (
-          <span
-            key={index}
-            className="flex flex-row w-full space-x-6 items-start"
-          >
-            {left ? <CheckBlack /> : <CrossBlack />}
-            <p className="text-left">{desc}</p>
+          <span key={index} className="flex flex-row w-full justify-center">
+            {left ? (
+              <div className="flex w-[10%] pt-4">
+                <CheckBlack />
+              </div>
+            ) : (
+              <div className="flex w-[10%] pt-4">
+                <CrossBlack />
+              </div>
+            )}
+            <p className="flex text-left w-[90%]">{desc}</p>
           </span>
         ))}
       </div>

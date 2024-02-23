@@ -20,7 +20,7 @@ export const ServiceCard = ({
   time,
 }: ServiceCard) => {
   return (
-    <div className="w-full max-w-[354px] rounded rounded-lg lg:max-w-[419px] h-full max-h-[919px] flex flex-col justify-center items-center">
+    <div className="w-full max-w-[354px] rounded-lg lg:max-w-[419px] h-full flex flex-col pb-12">
       <div className="w-full bg-black rounded-t-lg p-[3vw] lg:p-[2vw] flex flex-col justify-center items-start">
         <h3 className="text-white"> {title} </h3>
         <h4 className="text-white"> {subtitle}</h4>

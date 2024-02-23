@@ -27,7 +27,7 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
 
   const nextImageIndex = (current + 1) % (images?.length || 1);
   return (
-    <div className="w-[100svw] h-[100dvh] relative overflow-hidden">
+    <div className="w-[100svw] h-[100dvh] relative overflow-hidden overscroll-x-none">
       {images?.map((img, index) => (
         <>
           <img
@@ -82,7 +82,7 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
       <a
         href="mailto:hey@brandwithgaby.com"
         target="_blank"
-        className="absolute bottom-8 right-8 z-10"
+        className="absolute bottom-8 right-8 z-10 lg:hidden"
         rel="noreferrer"
       >
         {messageIcon()}
