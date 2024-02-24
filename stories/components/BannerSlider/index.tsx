@@ -29,9 +29,8 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
   return (
     <div className="w-[100svw] h-[100dvh] relative overflow-hidden overscroll-x-none">
       {images?.map((img, index) => (
-        <>
+        <div key={JSON.stringify(img.split('/'))}>
           <img
-            key={index}
             src={img}
             alt={`banner-${index}`}
             className={`w-full h-full absolute object-cover object-center transition-opacity duration-700 ease-in-out ${
@@ -40,7 +39,6 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
             style={{zIndex: index === current ? 2 : 1}}
           />
           <img
-            key={index}
             src={images[nextImageIndex]}
             alt={`banner-${index}`}
             className={`hidden lg:flex w-full h-full object-cover object-left absolute -right-[70%] top-0 transition-opacity duration-[800ms] ease-in-out ${
@@ -48,7 +46,7 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
             }`}
             style={{zIndex: index === current ? 2 : 1}}
           />
-        </>
+        </div>
       ))}
 
       <button
@@ -138,14 +136,14 @@ const leftIcon = () => {
       <path
         d="M29.4303 38.8901C29.4303 32.3301 33.3103 26.6901 38.9003 24.1101C36.8303 23.1501 34.5203 22.6201 32.0903 22.6201C23.1003 22.6201 15.8203 29.9101 15.8203 38.8901C15.8203 47.8701 23.1103 55.1601 32.0903 55.1601C34.5203 55.1601 36.8303 54.6201 38.9003 53.6701C33.3103 51.0901 29.4303 45.4501 29.4303 38.8901Z"
         stroke="black"
-        stroke-width="0.68"
-        stroke-miterlimit="10"
+        strokeWidth="0.68"
+        strokeMiterlimit="10"
       />
       <path
         d="M45.7006 22.6201C43.2706 22.6201 40.9606 23.1601 38.8906 24.1101C44.4806 26.6901 48.3606 32.3301 48.3606 38.8901C48.3606 45.4501 44.4806 51.0901 38.8906 53.6701C40.9606 54.6301 43.2706 55.1601 45.7006 55.1601C54.6906 55.1601 61.9706 47.8701 61.9706 38.8901C61.9706 29.9101 54.6806 22.6201 45.7006 22.6201Z"
         stroke="black"
-        stroke-width="0.68"
-        stroke-miterlimit="10"
+        strokeWidth="0.68"
+        strokeMiterlimit="10"
       />
     </svg>
   );
@@ -167,26 +165,26 @@ const rightIcon = () => {
       <path
         d="M58.8914 38.8399C58.8614 27.8399 49.9514 18.9199 38.9414 18.8899C39.6814 29.5699 48.2114 38.0999 58.8914 38.8399Z"
         stroke="#EBECE7"
-        stroke-width="0.68"
-        stroke-miterlimit="10"
+        strokeWidth="0.68"
+        strokeMiterlimit="10"
       />
       <path
         d="M38.8406 18.8899C27.8406 18.9199 18.9206 27.8299 18.8906 38.8399C29.5706 38.0999 38.1006 29.5699 38.8406 18.8899Z"
         stroke="#EBECE7"
-        stroke-width="0.68"
-        stroke-miterlimit="10"
+        strokeWidth="0.68"
+        strokeMiterlimit="10"
       />
       <path
         d="M18.8906 38.95C18.9206 49.95 27.8306 58.87 38.8406 58.9C38.1006 48.22 29.5706 39.69 18.8906 38.95Z"
         stroke="#EBECE7"
-        stroke-width="0.68"
-        stroke-miterlimit="10"
+        strokeWidth="0.68"
+        strokeMiterlimit="10"
       />
       <path
         d="M38.9512 58.8899C49.9512 58.8599 58.8712 49.9499 58.9012 38.9399C48.2212 39.6799 39.6912 48.2099 38.9512 58.8899Z"
         stroke="#EBECE7"
-        stroke-width="0.68"
-        stroke-miterlimit="10"
+        strokeWidth="0.68"
+        strokeMiterlimit="10"
       />
     </svg>
   );

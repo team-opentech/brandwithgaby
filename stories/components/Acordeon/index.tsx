@@ -8,19 +8,35 @@ interface AcordeonProps {
 export const Acordeon = ({title, children}: AcordeonProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <div className="flex flex-col w-full h-auto space-y-6 items-center justify-center">
+    <div
+      className={`flex flex-col w-full h-auto space-y-6 items-center justify-center`}
+    >
       <button
         className="flex w-full border-y border-solid border-black p-5"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="flex flex-row w-full justify-between items-center">
           <h5>{title}</h5>
-          <div className={`${isOpen ? 'rotate-180' : ''}`}>
+          <div
+            className={`${
+              isOpen
+                ? 'rotate-180 transition-transform duration-500'
+                : 'rotate-0 transition-transform duration-500'
+            }`}
+          >
             <DownArrow />
           </div>
         </span>
       </button>
-      <h4>{isOpen && children}</h4>
+      <h4
+        className={`${
+          isOpen
+            ? 'h-auto opacity-100 transition-transform duration-500'
+            : 'h-0 opacity-0 transition-transform duration-500'
+        }`}
+      >
+        {isOpen && children}
+      </h4>
     </div>
   );
 };
