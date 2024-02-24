@@ -11,7 +11,7 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prevCurrent) => (prevCurrent + 1) % (images?.length || 1));
-    }, 3700); // Esperamos la duración de la animación antes de cambiar a la siguiente imagen
+    }, 1700); // Esperamos la duración de la animación antes de cambiar a la siguiente imagen
 
     return () => clearInterval(interval);
   }, [current]);
@@ -27,18 +27,33 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
 
   const nextImageIndex = (current + 1) % (images?.length || 1);
   return (
-    <div className="flex flex-row justiy-center items-center animate-marquee relative space-x-[50px]">
-      {images?.map((img, index) => (
-        <>
-          <img
-            key={index}
-            src={img}
-            alt={`banner-${index}`}
-            className={`w-full max-w-[282.68px] lg:max-w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
-            style={{zIndex: index === current ? 2 : 1}}
-          />
-        </>
-      ))}
+    <div className="flex flex-1 flex-col max-w-2xl self-center relative">
+      <div className="self-center relative flex space-x-[50px]">
+        <div className="w-max flex flex-row animate-marquee space-x-[50px]">
+          {images?.map((img, index) => (
+            <>
+              <img
+                key={index}
+                src={img}
+                alt={`banner-${index}`}
+                className={`w-[282.68px] rounded rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
+              />
+            </>
+          ))}
+        </div>
+        <div className="w-max absolute top-0 flex flex-row animate-marquee2  space-x-[50px]">
+          {images?.map((img, index) => (
+            <>
+              <img
+                key={index}
+                src={img}
+                alt={`banner-${index}`}
+                className={`w-[282.68px] rounded rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
+              />
+            </>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
