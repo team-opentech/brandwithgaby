@@ -2,10 +2,10 @@ interface MarquesinaProps {
   text: string[];
 }
 
-export const Marquesina = ({ text }: MarquesinaProps) => {
+export const Marquesina = ({text}: MarquesinaProps) => {
   return (
     <div className="flex h-[63px] w-[100svw] bg-black overflow-hidden flex-nowrap">
-      <div className="animate-marquee-infinite flex flex-row w-[5000px] justify-center">
+      <div className="animate-marquee flex flex-row w-[5000px] justify-center">
         {text.map((t, index) => (
           <span
             key={index}

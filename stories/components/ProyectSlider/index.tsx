@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
 
-interface BannerSliderProps {
+interface ProyectSliderProps {
   images?: string[];
 }
 
-export const BannerSlider = ({images}: BannerSliderProps) => {
+export const ProyectSlider = ({images}: ProyectSliderProps) => {
   const [current, setCurrent] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
