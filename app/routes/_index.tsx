@@ -155,7 +155,7 @@ export default function Homepage() {
           className="object-cover w-full lg:w-[50%]"
           alt="no source"
         />
-        <div className="w-full lg:w-[50%] flex flex-col justify-center items-start p-[6vw]">
+        <div className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[80px] lg:py-[2vw] px-[6vw]">
           <h1 className="text-black mb-[18vh]">
             Hola,
             <br /> soy Gaby!
@@ -164,7 +164,7 @@ export default function Homepage() {
             styles="bg-black text-white p-2 rounded rounded-full h-10 max-w-[203px] border border-solid border-black mb-[12vh]"
             label="@brandwithgaby"
           />
-          <p className="text-black max-w-[331px] lg:max-w-[470px]">
+          <p className="leading-[25px] lg:leading-[2svw] text-black max-w-[331px] lg:max-w-[470px]">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
             significa tener un dream de emprender con algo, sino también
             ejecutarlo. A veces, la procrastinación nos gana, pero otras, es
@@ -175,14 +175,16 @@ export default function Homepage() {
           </p>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1450px] space-y-[10px] flex-col justify-center items-center">
-        <h2 className="text-center mt-[50px]">
-          Create your dream brand with me!
-        </h2>
-        <p className="text-center">
-          Si estás listx para dejar atrás las excusas y comenzar con tu marca,
-          esto te va a interesar.
-        </p>
+      <div className="flex bg-[#EBECE7] w-full h-[1650px] space-y-[80px] flex-col justify-center items-center">
+        <div className="flex flex-col space-y-[30px] justify-center items-center">
+          <h2 className="max-w-[342px] lg:max-w-none text-center mt-[50px]">
+            Create your dream brand with me!
+          </h2>
+          <p className="max-w-[342px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+            Si estás listx para dejar atrás las excusas y comenzar con tu marca,
+            esto te va a interesar.
+          </p>
+        </div>
         <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[40px] py-[30px]">
           <Button
             styles={`${
@@ -202,7 +204,7 @@ export default function Homepage() {
         <div className="h-full flex lg:hidden flex-row justify-center items-center">
           {showCard()}
         </div>
-        <div className="h-full hidden lg:flex flex-row space-x-[80px] justify-center items-center">
+        <div className="mt-[90px] max-h-[1298px] h-full hidden lg:flex flex-row space-x-[80px] justify-center items-center">
           <ServiceCard
             title="Kickstar"
             subtitle="Branding Package"
@@ -282,14 +284,16 @@ export default function Homepage() {
         </div>
       </div>
       <Marquesina text={Text.marquee.titles} />
-      <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[10px] flex-col justify-center items-center">
-        <h2 className="text-center mt-[90px]">
-          Create your dream brand with me!
-        </h2>
-        <p className="text-center">
-          Si estás listx para dejar atrás las excusas y comenzar con tu marca,
-          esto te va a interesar.
-        </p>
+      <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[80px] flex-col justify-center items-center">
+        <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[140px] justify-center items-center">
+          <h2 className="max-w-[276px] lg:max-w-none text-center">
+            Create your dream brand with me!
+          </h2>
+          <p className="max-w-[891px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+            Si estás listx para dejar atrás las excusas y comenzar con tu marca,
+            esto te va a interesar.
+          </p>
+        </div>
         <div className="h-full flex flex-col lg:flex-row lg:space-x-[80px] justify-center items-center">
           <InfoCard
             title="Este paquete SI es para ti, sí: "
@@ -331,12 +335,10 @@ export default function Homepage() {
         </h2>
         <ProyectSlider
           images={[
-            '/portfolio02.webp',
             '/portfolio01.webp',
             '/portfolio02.webp',
-            '/portfolio02.webp',
-            '/portfolio01.webp',
-            '/portfolio02.webp',
+            '/portfolio03.webp',
+            '/portfolio04.webp',
           ]}
         />
       </div>

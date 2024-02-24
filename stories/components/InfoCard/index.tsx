@@ -3,16 +3,12 @@ interface InfoCardProps {
   description: string[];
   left?: boolean;
 }
-export const InfoCard = ({
-  title,
-  description,
-  left = true,
-}: InfoCardProps) => {
+export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
   return (
     <div className="flex flex-col w-full h-full 2xl:max-w-[522px]">
       <div
-        className={`flex flex-col items-center justify-center w-full h-auto rounded-[15px] py-[2%] ${
-          left ? "bg-black text-white" : "bg-[#EBECE7] text-black"
+        className={`flex flex-col items-start px-[7%] justify-center w-full h-auto rounded-[15px] py-[3%] ${
+          left ? 'bg-black text-white' : 'bg-[#EBECE7] text-black'
         }`}
       >
         <h3>{title}</h3>

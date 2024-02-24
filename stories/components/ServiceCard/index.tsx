@@ -20,12 +20,12 @@ export const ServiceCard = ({
   time,
 }: ServiceCard) => {
   return (
-    <div className="w-full max-w-[354px] rounded-lg lg:max-w-[419px] h-full flex flex-col pb-12">
+    <div className="h-full w-full max-w-[354px] rounded-lg lg:max-w-[419px] h-full flex flex-col pb-12">
       <div className="w-full bg-black rounded-t-lg p-[3vw] lg:p-[2vw] flex flex-col justify-center items-start">
         <h3 className="text-white"> {title} </h3>
         <h4 className="text-white"> {subtitle}</h4>
       </div>
-      <div className="w-full bg-white p-[3vw] lg:p-[2vw] border border-b-black flex flex-col justify-center items-start">
+      <div className="h-[50%] w-full bg-white p-[3vw] lg:p-[2vw] border border-b-black flex flex-col justify-start items-start">
         {servicesList.map((service, index) => (
           <p key={index} className="text-black leading-[35px]">
             {service}
@@ -38,7 +38,7 @@ export const ServiceCard = ({
         </p>
         <p className="text-[#9B9B9B] leading-[35px]">{dues}</p>
       </div>
-      <div className="w-full bg-white p-[3vw] lgp-[2vw] flex flex-col justify-center items-start border border-b-black">
+      <div className="h-full w-full bg-white p-[3vw] lgp-[2vw] flex flex-col justify-start items-start border border-b-black">
         <p className="text-black">Incluye:</p>
         {include.map((item, i) => (
           <div
