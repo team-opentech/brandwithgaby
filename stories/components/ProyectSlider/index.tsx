@@ -29,15 +29,14 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
   return (
     <div className="flex flex-row justiy-center items-center animate-marquee relative space-x-[50px]">
       {images?.map((img, index) => (
-        <>
+        <div key={JSON.stringify(img.split('/'))}>
           <img
-            key={index}
             src={img}
             alt={`banner-${index}`}
             className={`w-full max-w-[282.68px] lg:max-w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
             style={{zIndex: index === current ? 2 : 1}}
           />
-        </>
+        </div>
       ))}
     </div>
   );
