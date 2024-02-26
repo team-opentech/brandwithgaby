@@ -5,6 +5,7 @@ import {Image, Money} from '@shopify/hydrogen';
 import type {
   FeaturedCollectionFragment,
   RecommendedProductsQuery,
+  ProductQuery,
 } from 'storefrontapi.generated';
 import {BannerSlider} from '../../stories/components/BannerSlider';
 import {Marquesina} from '../../stories/components/Marquesina';
@@ -20,111 +21,19 @@ export const meta: MetaFunction = () => {
 
 export async function loader({context}: LoaderFunctionArgs) {
   const {storefront} = context;
-  const {collections} = await storefront.query(FEATURED_COLLECTION_QUERY);
-  const featuredCollection = collections.nodes[0];
-  const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
+  const {products} = await storefront.query(PRODUCT_QUERY);
+  // const featuredCollection = collections.nodes[0];
+  // const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
-  return defer({featuredCollection, recommendedProducts});
+  // return defer({featuredCollection, recommendedProducts});
+  return defer({products});
 }
 
 export default function Homepage() {
-  const [show, useShow] = useState(false);
-  const showCard = () => {
-    if (show)
-      return (
-        <ServiceCard
-          title="Kickstar"
-          subtitle="Branding Package"
-          price="1,980.00"
-          time="¡Pack listo en 2 semanas!"
-          servicesList={[
-            '30-Min Zoom Meeting',
-            'Branding',
-            'Logo',
-            'Brand Guidelines',
-          ]}
-          dues="o 4 cuotas de $495.00 with afterpay"
-          include={[
-            {
-              title: '2 Opciones de logo.',
-              description: '',
-            },
-            {
-              title: '2 Rondas de revisiones de logo',
-              description: '',
-            },
-            {
-              title: 'Brand Guidelines PDF:',
-              description:
-                'Concepto de estilo de marca con logo, tipografías, colores.',
-            },
-            {
-              title: '3 piezas de diseño a definir.',
-              description:
-                '(business cards, thank you card, stickers, etiquetas, hojas membretadas, artes sencillos).',
-            },
-            {
-              title: 'Social Media Assets:',
-              description:
-                'Logo para perfil, cover para Facebook, Youtube o Linkedin.',
-            },
-            {
-              title: 'Entrega de Brand Kit:',
-              description:
-                'Logo, tipografía y piezas de diseños en archivos editables.',
-            },
-          ]}
-        />
-      );
-
-    return (
-      <ServiceCard
-        title="Launchboost"
-        subtitle="Branding Package"
-        price="3,800.00"
-        time="¡Pack listo en 2 semanas!"
-        servicesList={[
-          '30-Min Zoom Meeting',
-          'Branding',
-          'Logo',
-          'Brand Guidelines',
-        ]}
-        dues="o 4 cuotas de $495.00 with afterpay"
-        include={[
-          {
-            title: '2 Opciones de logo.',
-            description: '',
-          },
-          {
-            title: '2 Rondas de revisiones de logo',
-            description: '',
-          },
-          {
-            title: 'Brand Guidelines PDF:',
-            description:
-              'Concepto de estilo de marca con logo, tipografías, colores.',
-          },
-          {
-            title: '3 piezas de diseño a definir.',
-            description:
-              '(business cards, thank you card, stickers, etiquetas, hojas membretadas, artes sencillos).',
-          },
-          {
-            title: 'Social Media Assets:',
-            description:
-              'Logo para perfil, cover para Facebook, Youtube o Linkedin.',
-          },
-          {
-            title: 'Entrega de Brand Kit:',
-            description:
-              'Logo, tipografía y piezas de diseños en archivos editables.',
-          },
-        ]}
-      />
-    );
-  };
-
+  const [show, setShow] = useState(false);
   const data = useLoaderData<typeof loader>();
+  const [projectID, setProjectID] = useState(data.products.nodes[0].id);
+
   return (
     <div className="w-screen h-full p-0 overscroll-x-none overflow-hidden">
       <BannerSlider
@@ -186,105 +95,86 @@ export default function Homepage() {
           </p>
         </div>
         <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[40px] py-[30px]">
+          {data.products.nodes.map((p: any) => {
+            return (
+              <Button
+                key={p.id}
+                styles={`${
+                  p.id === projectID
+                    ? 'bg-black text-white'
+                    : 'bg-none text-black'
+                } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
+                label={p.handle}
+                onClick={() => {
+                  setShow(true);
+                  setProjectID(p.id);
+                }}
+              />
+            );
+          })}
+          {/* <Button
+            styles={`${
+              !show ? 'bg-none text-black' : 'bg-black text-white'
+            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
+            label="Kickstar"
+            onClick={() => setShow(true)}
+          />
           <Button
             styles={`${
               show ? 'bg-none text-black' : 'bg-black text-white'
-            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black `}
-            label="Kickstar"
-            onClick={() => useShow(true)}
-          />
-          <Button
-            styles={`${
-              !show ? 'bg-none text-black' : 'bg-black text-white'
-            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black `}
+            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
             label="Launchboost"
-            onClick={() => useShow(false)}
-          />
+            onClick={() => setShow(false)}
+          /> */}
         </div>
-        <div className="h-full flex lg:hidden flex-row justify-center items-center">
-          {showCard()}
+        <div className="h-full flex lg:hidden flex-row justify-center">
+          {data.products.nodes.map((p: any) => {
+            const descriptionHtml = p.descriptionHtml;
+            const parts = descriptionHtml.split('---split---');
+            const servicesList = parts[0];
+            const includes = parts[1];
+            return (
+              <div
+                key={p.id}
+                className={`${p.id === projectID ? 'flex' : 'hidden'}`}
+              >
+                <ServiceCard
+                  key={p.id}
+                  title={p.handle}
+                  subtitle={p.subtitle.value}
+                  price={p.priceRange.maxVariantPrice.amount}
+                  time={p.date_delivery.value}
+                  servicesList={servicesList}
+                  dues={p.price_text.value}
+                  include={includes}
+                />
+              </div>
+            );
+          })}
         </div>
         <div className="mt-[90px] max-h-[1298px] h-full hidden lg:flex flex-row space-x-[80px] justify-center items-center">
-          <ServiceCard
-            title="Kickstar"
-            subtitle="Branding Package"
-            price="1,980.00"
-            time="¡Pack listo en 2 semanas!"
-            servicesList={[
-              '30-Min Zoom Meeting',
-              'Branding',
-              'Logo',
-              'Brand Guidelines',
-            ]}
-            dues="o 4 cuotas de $495.00 with afterpay"
-            include={[
-              {
-                title: '2 Opciones de logo.',
-                description: '',
-              },
-              {
-                title: '2 Rondas de revisiones de logo',
-                description: '',
-              },
-              {
-                title: 'Brand Guidelines PDF:',
-                description:
-                  'Concepto de estilo de marca con logo, tipografías, colores.',
-              },
-              {
-                title: '3 piezas de diseño a definir.',
-                description:
-                  '(business cards, thank you card, stickers, etiquetas, hojas membretadas, artes sencillos).',
-              },
-              {
-                title: 'Social Media Assets:',
-                description:
-                  'Logo para perfil, cover para Facebook, Youtube o Linkedin.',
-              },
-              {
-                title: 'Entrega de Brand Kit:',
-                description:
-                  'Logo, tipografía y piezas de diseños en archivos editables.',
-              },
-            ]}
-          />
-          <ServiceCard
-            title="LaunchBoost"
-            subtitle="Branding + Landing Page Package"
-            price="3,800.00"
-            time="¡Pack listo en 4 semanas!"
-            servicesList={[
-              '30-Min Zoom Meeting Branding',
-              'Logo',
-              'Brand Guidelines',
-              '30-Min Zoom Meeting Landing Page',
-              'Landing Page',
-            ]}
-            dues="o 4 cuotas de $950.00 with afterpay"
-            include={[
-              {
-                title: 'Website Consultation.',
-                description: '',
-              },
-              {
-                title: 'Vistas previas de estilo del sitio web.',
-                description: '',
-              },
-              {
-                title: 'Refinamiento y aprobación',
-                description: '',
-              },
-              {
-                title: 'Lanzamiento: tu marca on line. ',
-                description:
-                  'El dominio y hospedaje corre por parte del cliente.',
-              },
-            ]}
-          />
+          {data.products.nodes.map((p: any) => {
+            const descriptionHtml = p.descriptionHtml;
+            const parts = descriptionHtml.split('---split---');
+            const servicesList = parts[0];
+            const includes = parts[1];
+            return (
+              <ServiceCard
+                key={p.id}
+                title={p.handle}
+                subtitle={p.subtitle.value}
+                price={p.priceRange.maxVariantPrice.amount}
+                time={p.date_delivery.value}
+                servicesList={servicesList}
+                dues={p.price_text.value}
+                include={includes}
+              />
+            );
+          })}
         </div>
       </div>
       <Marquesina text={Text.marquee.titles} />
-      <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[80px] flex-col justify-center items-center">
+      <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
         <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[140px] justify-center items-center">
           <h2 className="max-w-[276px] lg:max-w-none text-center">
             Como saber si es para tí.
@@ -319,7 +209,11 @@ export default function Homepage() {
       </div>
       <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] flex-col justify-center items-center">
         <img src="/Q&A-logo.svg" alt="no-source" />
-        <p className="underline cursor-pointer">Preguntas frecuentes</p>
+        <a href="/faq/">
+          <p className="underline cursor-pointer text-center">
+            Preguntas frecuentes
+          </p>
+        </a>
       </div>
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
@@ -461,4 +355,42 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
       }
     }
   }
+` as const;
+
+const PRODUCT_QUERY = `#graphql
+query PRODUCT_QUERY {
+  products(first: 10) {
+    nodes {
+      id
+      handle
+      description
+      descriptionHtml
+      priceRange {
+        maxVariantPrice {
+          amount
+          currencyCode
+        }
+      }
+      price_text:metafield(key: "price_text", namespace: "custom") {
+        id
+        value
+        namespace
+        key
+      }
+      
+			date_delivery:metafield(key: "date_delivery", namespace: "custom") {
+        id
+        value
+        namespace
+        key
+      }
+      subtitle:metafield(key: "subtitle", namespace: "custom") {
+        id
+        value
+        namespace
+        key
+      }
+    }
+  }
+}
 ` as const;
