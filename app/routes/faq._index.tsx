@@ -1,6 +1,4 @@
-import {json, type LoaderFunctionArgs} from '@shopify/remix-oxygen';
 import {Link, useLoaderData, type MetaFunction} from '@remix-run/react';
-import {Pagination, getPaginationVariables} from '@shopify/hydrogen';
 import data from '../../src/texts/faq.json';
 import {Acordeon} from '../../stories/components/Acordeon';
 
