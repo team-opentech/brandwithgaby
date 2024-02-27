@@ -63,15 +63,15 @@ export default function Homepage() {
           alt="no source"
         />
         <div className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[80px] lg:py-[2vw] px-[6vw]">
-          <h1 className="text-black mb-[18vh]">
+          <h1 className="text-black mb-[14vh]">
             Hola,
             <br /> soy Gaby!
           </h1>
           <Button
-            styles="bg-black text-white p-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[12vh]"
+            styles="bg-black text-white font-normal text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[12vh] lowercase"
             label="@brandwithgaby"
           />
-          <p className="leading-[25px] lg:leading-[2svw] text-black max-w-[331px] lg:max-w-[470px]">
+          <h4 className="text-black max-w-[331px] lg:max-w-[510px]">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
             significa tener un dream de emprender con algo, sino también
             ejecutarlo. A veces, la procrastinación nos gana, pero otras, es
@@ -79,7 +79,7 @@ export default function Homepage() {
             <br /> <br />
             Por eso, he creado estos dos packages que son ideales para ti, para
             darte ese boost y empezar a darle vida a tu sueño.
-          </p>
+          </h4>
         </div>
       </div>
       <div className="flex bg-[#EBECE7] w-full h-[1650px] space-y-[80px] flex-col justify-center items-center">

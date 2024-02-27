@@ -9,7 +9,7 @@ export const Button = ({styles, label, ...props}: ButtonProps) => {
     <button
       onClick={props.onClick}
       className={
-        styles + ' hover:scale-110 hover:transition-transform duration-[500ms] capitalize'
+        styles + ' hover:scale-110 hover:transition-transform duration-[500ms]'
       }
       {...props}
     >
