@@ -13,7 +13,7 @@ export const Button = ({styles, label, ...props}: ButtonProps) => {
       }
       {...props}
     >
-      {label}
+      <h5>{label}</h5>
     </button>
   );
 };
