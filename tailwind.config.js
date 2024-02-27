@@ -5,10 +5,12 @@ import typographyPlugin from '@tailwindcss/typography';
 export default {
   theme: {
     // Some useful comment
-    fontFamily: {
-      'Bricolage-Grotesque': ['Bricolage Grotesque', 'sans-serif'],
-      Inter: ['Inter', 'serif'],
-      Chakra: ['Chakra Petch', 'sans-serif'],
+    extend: {
+      fontFamily: {
+        BricolageGrotesque: ['BricolageGrotesque', 'sans-serif'],
+        Inter: ['Inter', 'serif'],
+        Chakra: ['Chakra Petch', 'sans-serif'],
+      },
     },
     animation: {
       marquee: 'marquee 30s linear infinite',

@@ -50,11 +50,9 @@ export default function Homepage() {
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
-          <p
-            className={`flex text-[12px] lg:text-[16px]   uppercase text-white`}
-          >
+          <h6 className={`flex uppercase text-white tracking-[1rem]`}>
             the brand of your dreams
-          </p>
+          </h6>
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
@@ -70,7 +68,7 @@ export default function Homepage() {
             <br /> soy Gaby!
           </h1>
           <Button
-            styles="bg-black text-white p-2 rounded rounded-full h-10 max-w-[203px] border border-solid border-black mb-[12vh]"
+            styles="bg-black text-white p-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[12vh]"
             label="@brandwithgaby"
           />
           <p className="leading-[25px] lg:leading-[2svw] text-black max-w-[331px] lg:max-w-[470px]">
