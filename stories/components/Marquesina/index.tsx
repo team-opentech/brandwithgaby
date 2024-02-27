@@ -2,22 +2,39 @@ interface MarquesinaProps {
   text: string[];
 }
 
-export const Marquesina = ({text}: MarquesinaProps) => {
+export const Marquesina = ({ text }: MarquesinaProps) => {
   return (
-    <div className="flex h-[63px] w-[100svw] bg-black overflow-hidden flex-nowrap">
-      <div className="animate-marquee flex flex-row w-[5000px] justify-center">
+    <div className="flex flex-1 flex-row h-[63px] w-[100svw] bg-black overflow-hidden flex-nowrap">
+      <div className="animate-marquee flex flex-row w-max justify-evenly items-center flex-mowrap">
         {text.map((t, index) => (
-          <span
+          <div
             key={index}
-            className="flex flex-row justify-center items-center"
+            className="flex flex-row justify-evenly items-center flex-nowrap"
           >
-            <p
-              className={`flex w-[222px] lg:w-[232px] h-[46px] text-white text-right`}
+            <h6
+              key={index}
+              className={`flex flex-1 w-max h-[46px] text-white text-center tracking-[1rem] flex-nowrap uppercase`}
             >
               {t}
-            </p>
+            </h6>
             <Icon />
-          </span>
+          </div>
+        ))}
+      </div>
+      <div className="animate-marquee flex flex-row w-max justify-evenly items-center flex-mowrap">
+        {text.map((t, index) => (
+          <div
+            key={index}
+            className="flex flex-row justify-evenly items-center flex-nowrap"
+          >
+            <h6
+              key={index}
+              className={`flex flex-1 w-max h-[46px] text-white text-center tracking-[1rem] flex-nowrap uppercase`}
+            >
+              {t}
+            </h6>
+            <Icon />
+          </div>
         ))}
       </div>
     </div>

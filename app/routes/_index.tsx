@@ -174,16 +174,16 @@ export default function Homepage() {
       <Marquesina text={Text.marquee.titles} />
       <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
         <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[140px] justify-center items-center">
-          <h2 className="max-w-[276px] lg:max-w-none text-center">
-            Como saber si es para tí.
-          </h2>
-          <p className="max-w-[359px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+          <h1 className="max-w-[276px] lg:max-w-none text-center">
+            Cómo saber si es para tí.
+          </h1>
+          <h4 className="max-w-[359px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
-            <br /> <br />
+            <br />
             Te dejo una lista de los sí y de los no para saber si estos
             productos son para tí
-          </p>
+          </h4>
         </div>
         <div className="h-full flex flex-col lg:flex-row lg:space-x-[80px] justify-center items-center">
           <InfoCard
@@ -205,10 +205,10 @@ export default function Homepage() {
           />
         </div>
       </div>
-      <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] flex-col justify-center items-center">
+      <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] lg:space-y-[15px] flex-col justify-center items-center">
         <img src="/Q&A-logo.svg" alt="no-source" />
         <a href="/faq/">
-          <p className="underline cursor-pointer text-center">
+          <p className="underline cursor-pointer text-center text-[26px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque">
             Preguntas frecuentes
           </p>
         </a>
