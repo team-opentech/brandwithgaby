@@ -47,7 +47,7 @@ export const ServiceCard = ({
         <h3 className="text-white capitalize"> {title} </h3>
         <h4 className="text-white"> {subtitle}</h4>
       </div>
-      <div className="h-[50%] w-full bg-white p-[3vw] lg:p-[1vw] border border-b-black flex flex-col justify-start items-start">
+      <div className="h-[50%] 2xl:min-h-[18svw] w-full bg-white p-[3vw] lg:p-[1vw] border border-b-black flex flex-col justify-start items-start">
         <div
           className="font-Inter font-[400] text-[16px] leading-[27px]"
           dangerouslySetInnerHTML={{__html: servicesList}}
@@ -60,7 +60,7 @@ export const ServiceCard = ({
         <p className="text-[#9B9B9B] leading-[35px]">{dues}</p>
       </div>
       <div className="h-full w-full bg-white p-[3vw] lg:p-[1vw] flex flex-col justify-start items-start border border-b-black">
-        <div className="font-Inter font-[500] text-[13px] leading-[27px]">
+        <div id="dues" className="font-Inter font-[500] text-[13px] leading-[27px]">
           {includesWithSVG}
         </div>
       </div>

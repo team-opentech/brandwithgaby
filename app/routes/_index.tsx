@@ -225,7 +225,7 @@ export default function Homepage() {
         </div>
       </div>
       <div className="flex bg-[#EBECE7] w-full min-h-[560px] lg:min-h-[810px] space-y-[120px] flex-col justify-center items-center">
-        <h2 className="hidden lg:flex">
+        <h2 className="mt-[80px] hidden lg:flex">
           They said yes to doing their brands with me!
         </h2>
         <ProyectSlider
