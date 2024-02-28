@@ -42,7 +42,26 @@ export const ServiceCard = ({
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
   return (
-    <div className="h-full w-full max-w-[354px] rounded-lg lg:max-w-[419px] flex flex-col pb-12">
+    <div className="relative h-full w-full max-w-[354px] rounded-lg lg:max-w-[419px] flex flex-col pb-12">
+      <img
+        src="/Service-Icon-1.svg"
+        alt="Logo"
+        className={
+          title == 'kickstar'
+            ? 'hidden lg:flex absolute top-[-6%] right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
+            : 'hidden'
+        }
+      />
+
+      <img
+        src="/Service-Icon-2.svg"
+        alt="Logo"
+        className={
+          title == 'launchboost'
+            ? 'hidden lg:flex absolute right-[-40%] bottom-[25%] transform translate-x-2/4 translate-y-2/4 z-10'
+            : 'hidden'
+        }
+      />
       <div className="w-full bg-black rounded-t-lg p-[3vw] lg:p-[2vw] flex flex-col justify-center items-start">
         <h3 className="text-white capitalize"> {title} </h3>
         <h4 className="text-white"> {subtitle}</h4>
@@ -60,7 +79,10 @@ export const ServiceCard = ({
         <p className="text-[#9B9B9B] leading-[35px]">{dues}</p>
       </div>
       <div className="h-full w-full bg-white p-[3vw] lg:p-[1vw] flex flex-col justify-start items-start border border-b-black">
-        <div id="dues" className="font-Inter font-[500] text-[13px] leading-[27px]">
+        <div
+          id="dues"
+          className="font-Inter font-[500] text-[13px] leading-[27px]"
+        >
           {includesWithSVG}
         </div>
       </div>
