@@ -50,11 +50,9 @@ export default function Homepage() {
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
-          <p
-            className={`flex text-[12px] lg:text-[16px]   uppercase text-white`}
-          >
+          <h6 className={`flex uppercase text-white tracking-[1rem]`}>
             the brand of your dreams
-          </p>
+          </h6>
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
@@ -65,15 +63,15 @@ export default function Homepage() {
           alt="no source"
         />
         <div className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[80px] lg:py-[2vw] px-[6vw]">
-          <h1 className="text-black mb-[18vh]">
+          <h1 className="text-black mb-[14vh]">
             Hola,
             <br /> soy Gaby!
           </h1>
           <Button
-            styles="bg-black text-white p-2 rounded rounded-full h-10 max-w-[203px] border border-solid border-black mb-[12vh]"
+            styles="bg-black text-white font-normal text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[12vh] lowercase"
             label="@brandwithgaby"
           />
-          <p className="leading-[25px] lg:leading-[2svw] text-black max-w-[331px] lg:max-w-[470px]">
+          <h4 className="text-black max-w-[331px] lg:max-w-[510px]">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
             significa tener un dream de emprender con algo, sino también
             ejecutarlo. A veces, la procrastinación nos gana, pero otras, es
@@ -81,7 +79,7 @@ export default function Homepage() {
             <br /> <br />
             Por eso, he creado estos dos packages que son ideales para ti, para
             darte ese boost y empezar a darle vida a tu sueño.
-          </p>
+          </h4>
         </div>
       </div>
       <div className="flex bg-[#EBECE7] w-full h-[1650px] space-y-[80px] flex-col justify-center items-center">
@@ -176,16 +174,16 @@ export default function Homepage() {
       <Marquesina text={Text.marquee.titles} />
       <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
         <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[140px] justify-center items-center">
-          <h2 className="max-w-[276px] lg:max-w-none text-center">
-            Como saber si es para tí.
-          </h2>
-          <p className="max-w-[359px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+          <h1 className="max-w-[276px] lg:max-w-none text-center">
+            Cómo saber si es para tí.
+          </h1>
+          <h4 className="max-w-[359px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
-            <br /> <br />
+            <br />
             Te dejo una lista de los sí y de los no para saber si estos
             productos son para tí
-          </p>
+          </h4>
         </div>
         <div className="h-full flex flex-col lg:flex-row lg:space-x-[80px] justify-center items-center">
           <InfoCard
@@ -207,10 +205,10 @@ export default function Homepage() {
           />
         </div>
       </div>
-      <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] flex-col justify-center items-center">
+      <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] lg:space-y-[15px] flex-col justify-center items-center">
         <img src="/Q&A-logo.svg" alt="no-source" />
         <a href="/faq/">
-          <p className="underline cursor-pointer text-center">
+          <p className="underline cursor-pointer text-center text-[26px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque">
             Preguntas frecuentes
           </p>
         </a>
@@ -227,7 +225,7 @@ export default function Homepage() {
         </div>
       </div>
       <div className="flex bg-[#EBECE7] w-full min-h-[560px] lg:min-h-[810px] space-y-[120px] flex-col justify-center items-center">
-        <h2 className="hidden lg:flex">
+        <h2 className="mt-[80px] hidden lg:flex">
           They said yes to doing their brands with me!
         </h2>
         <ProyectSlider

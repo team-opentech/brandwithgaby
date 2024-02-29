@@ -13,7 +13,7 @@ export const Navbar = () => {
       </a>
 
       <Button
-        styles="hidden lg:flex justify-center bg-black text-white p-2 rounded rounded-full h-10 w-full max-w-[203px] border border-solid border-black"
+        styles="hidden lg:flex justify-center items-center bg-black text-white p-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black"
         label="Talk with me!"
       />
     </header>

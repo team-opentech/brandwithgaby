@@ -2,34 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url("../../public/fonts/BricolageGrotesque-VariableFont_wght.ttf");
+}
 @layer base {
   /* ... */
   h1 {
-    @apply text-[45px] leading-[59px] tracking-wider font-normal font-Bricolage-Grotesque;
-    @media screen and (max-width: 1024px){
-      @apply text-[40px] leading-[59px] tracking-wider font-normal font-Bricolage-Grotesque;
+    @apply text-[45px] leading-[59px] tracking-wider font-normal font-BricolageGrotesque;
+    @media screen and (max-width: 1024px) {
+      @apply text-[40px] leading-[59px] tracking-wider font-normal font-BricolageGrotesque;
     }
-  };
-  h2{
-    @apply text-[36px] leading-[36px] tracking-wider font-normal font-Bricolage-Grotesque;
-  };
+  }
+  h2 {
+    @apply text-[36px] leading-[36px] tracking-wider font-normal font-BricolageGrotesque;
+  }
 
-    h3{
-        @apply text-[26px] leading-[25px] tracking-wider font-normal font-Bricolage-Grotesque;
-    };
+  h3 {
+    @apply text-[26px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque;
+  }
 
-    h4{
-        @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter;
-    };
+  h4 {
+    @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter;
+  }
 
-    h5{
-        @apply text-[18px] leading-[25px] tracking-wider font-normal font-Bricolage-Grotesque;
-    };
+  h5 {
+    @apply text-[18px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque;
+  }
 
-    h6{
-        @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
-    };
-    p{
-       @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
-    };
+  h6 {
+    @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
+  }
+  p {
+    @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
+  }
+
+  #dues span {
+    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+  }
+
+  #dues p {
+    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+  }
+
+  li {
+    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+  }
 }

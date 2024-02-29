@@ -7,7 +7,7 @@ export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
   return (
     <div className="flex flex-col w-full h-full 2xl:max-w-[522px]">
       <div
-        className={`flex flex-col items-start px-[7%] justify-center w-full h-auto rounded-[15px] py-[5%] lg:py-[3%] ${
+        className={`flex flex-col items-start px-[7%] justify-center w-full h-auto rounded-[15px] py-[5%] ${
           left ? 'bg-black text-white' : 'bg-[#EBECE7] text-black'
         }`}
       >
@@ -17,15 +17,15 @@ export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
         {description.map((desc, index) => (
           <span key={index} className="flex flex-row w-full justify-center">
             {left ? (
-              <div className="flex w-[10%] pt-4">
+              <div className="flex w-[10%] pt-2">
                 <CheckBlack />
               </div>
             ) : (
-              <div className="flex w-[10%] pt-4">
+              <div className="flex w-[10%] pt-2">
                 <CrossBlack />
               </div>
             )}
-            <p className="flex text-left w-[90%]">{desc}</p>
+            <h4 className="flex text-left w-[90%]">{desc}</h4>
           </span>
         ))}
       </div>
