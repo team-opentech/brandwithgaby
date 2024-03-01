@@ -42,7 +42,7 @@ export const ServiceCard = ({
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
   return (
-    <div className="relative h-full w-full max-w-[354px] rounded-lg lg:max-w-[419px] flex flex-col pb-12">
+    <div className="relative h-[1053px] w-full max-w-[354px] rounded-lg lg:max-w-[419px] flex flex-col pb-12">
       <img
         src="/Service-Icon-1.svg"
         alt="Logo"
@@ -68,6 +68,7 @@ export const ServiceCard = ({
       </div>
       <div className="h-[50%] 2xl:min-h-[18svw] w-full bg-white p-[3vw] lg:p-[1vw] border border-b-black flex flex-col justify-start items-start">
         <div
+          id="servicesLists"
           className="font-Inter font-[400] text-[16px] leading-[27px]"
           dangerouslySetInnerHTML={{__html: servicesList}}
         />
@@ -86,14 +87,14 @@ export const ServiceCard = ({
           {includesWithSVG}
         </div>
       </div>
-      <div className="w-full bg-white p-[3vw] lg:p-[1vw] rounded-b-lg flex flex-col justify-center items-start space-y-[20px]">
+      <div className="w-full min-h-[190px] bg-white p-[3vw] lg:p-[1vw] rounded-b-lg flex flex-col justify-center items-start space-y-[20px]">
         <div className="w-full space-x-[25px] flex flex-row justify-start items-center">
           <img src="/clock.svg" alt="*" />
           <p className="text-black">{time}</p>
         </div>
         <div className="w-full flex flex-col justify-center items-center">
           <Button
-            styles="justify-center bg-black text-white p-2 rounded rounded-full h-10 w-full max-w-[203px] border border-solid border-black"
+            styles="justify-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
             label="¡Comencemos!"
           />
         </div>

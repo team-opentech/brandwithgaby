@@ -50,9 +50,9 @@ export default function Homepage() {
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
-          <h6 className={`flex uppercase text-white tracking-[1rem]`}>
+          <p className={`flex uppercase text-white`}>
             the brand of your dreams
-          </h6>
+          </p>
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
@@ -63,12 +63,12 @@ export default function Homepage() {
           alt="no source"
         />
         <div className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[80px] lg:py-[2vw] px-[6vw]">
-          <h1 className="text-black mb-[14vh]">
+          <h1 className="text-black mb-[6vh] lg:mb-[14vh]">
             Hola,
             <br /> soy Gaby!
           </h1>
           <Button
-            styles="bg-black text-white font-normal text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[12vh] lowercase"
+            styles="bg-black text-white font-normal text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
           />
           <h4 className="text-black max-w-[331px] lg:max-w-[510px]">
@@ -84,10 +84,10 @@ export default function Homepage() {
       </div>
       <div className="flex bg-[#EBECE7] w-full h-[1650px] space-y-[80px] flex-col justify-center items-center">
         <div className="flex flex-col space-y-[30px] justify-center items-center">
-          <h2 className="max-w-[342px] lg:max-w-none text-center mt-[50px]">
+          <h1 className="max-w-[342px] lg:max-w-none text-center mt-[50px]">
             Create your dream brand with me!
-          </h2>
-          <p className="max-w-[342px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+          </h1>
+          <p className="max-w-[342px] lg:max-w-none tracking-normal leading-[20px] lg:leading-[1.5svw] text-center">
             Si estás listx para dejar atrás las excusas y comenzar con tu marca,
             esto te va a interesar.
           </p>
@@ -185,7 +185,7 @@ export default function Homepage() {
             productos son para tí
           </h4>
         </div>
-        <div className="h-full flex flex-col lg:flex-row lg:space-x-[80px] justify-center items-center">
+        <div className="h-full flex flex-col lg:flex-row lg:mx-[60px] lg:space-x-[80px] justify-center items-center">
           <InfoCard
             title="Este paquete SI es para ti, sí: "
             description={[
@@ -205,7 +205,7 @@ export default function Homepage() {
           />
         </div>
       </div>
-      <div className="flex bg-white w-full h-full py-[70px] space-y-[10px] lg:space-y-[15px] flex-col justify-center items-center">
+      <div className="flex bg-white w-full h-full py-[70px] lg:pt-[70px] lg:pb-[120px] space-y-[10px] lg:space-y-[15px] flex-col justify-center items-center">
         <img src="/Q&A-logo.svg" alt="no-source" />
         <a href="/faq/">
           <p className="underline cursor-pointer text-center text-[26px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque">
