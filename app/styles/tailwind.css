@@ -47,6 +47,10 @@
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
   }
 
+  #servicesLists p{
+    @apply text-[13px] leading-loose tracking-wider font-normal font-Chakra;
+  }
+
   li {
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
   }
