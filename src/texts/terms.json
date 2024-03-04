@@ -1,0 +1,52 @@
+{
+  "terms": {
+    "title": "Términos y Condiciones",
+    "intro": "¡Bienvenido a Brand with Gaby! Antes de comenzar, te pedimos que revises detenidamente los siguientes términos y condiciones que rigen nuestro servicio de branding. Al aceptar estos términos, estás comprometido con la siguiente información:",
+    "list": [
+      {
+        "title": "1. Tiempo de Desarrollo:",
+        "content": "Estimamos un tiempo de desarrollo de aproximadamente 2 semanas para tu marca. Sin embargo, este plazo puede variar según la prontitud de tus respuestas y feedback. La cuenta del tiempo comienza después de la reunión inicial y la completación del formulario."
+      },
+      {
+        "title": "2. Reunión Inicial y Formulario:",
+        "content": "Una reunión inicial vía Zoom de 30 min,  es esencial para entender tu proyecto. Además, requerimos que completes un formulario que servirá como base o briefing para comenzar el diseño. El tiempo de desarrollo comienza una vez finaliza la reunión y se completa el formulario."
+      },
+      {
+        "title": "3. Cambios y Revisiones:",
+        "content": "Se permiten dos rondas de revisiones o cambios durante el proceso. Cualquier comentario o ajuste debe ser proporcionado dentro de estas rondas, ya que una vez aprobado, avanzamos a la siguiente fase del proyecto."
+      },
+      {
+        "title": "4. Pagos:",
+        "content": "Todos los pagos están expresados en USD. Ofrecemos la plataforma AfterPay para pagos en cuotas. Se requerirá el pago completo antes de la entrega final de los archivos."
+      },
+      {
+        "title": "5. Comunicación:",
+        "content": "La comunicación oficial se mantendrá a través del correo electrónico hey@brandwithgaby.com. Cualquier solicitud o cambio debe realizarse por este medio."
+      },
+      {
+        "title": "6. Piezas de Diseño:",
+        "content": "El paquete incluye tres piezas de diseño, que se definirán en la sesión inicial. Nos referimos a diseños simples como tarjetas de presentación y flyers. Diseños más extensos no están incluidos. Si tu proyecto requiere más piezas de diseño o una experiencia de marca más avanzada, recomendamos contactar a nuestra empresa aliada, Arquetipo."
+      },
+      {
+        "title": "7. Fase del Website:",
+        "content": "Antes de iniciar la fase del website, realizaremos otra reunión conjunta para definir la estructura del mismo. Durante esta sesión, discutiremos cómo puede estar estructurada la página, considerando tus necesidades y objetivos. Posteriormente, requerimos que completes un formulario adicional donde cargarás información esencial, como textos e información relevante para el landing page."
+      },
+      {
+        "title": "8. Contenido e Imágenes:",
+        "content": "Es responsabilidad del cliente proporcionar el contenido textual necesario para el website. En cuanto a las imágenes, el cliente puede proporcionar su material fotográfico. En caso de no contar con material fotográfico, utilizaremos imágenes de nuestro banco de imágenes para complementar."
+      },
+      {
+        "title": "9. Características del Website:",
+        "content": "El website será netamente informativo y diseñado en formato 'one-page'. Durante el proceso, definiremos llamadas a la acción (CTA), que pueden incluir contactarte, completar un formulario de contacto o ser redirigido a plataformas como WhatsApp."
+      },
+      {
+        "title": "10. Opciones Avanzadas:",
+        "content": "Si requieres una tienda en línea u opciones más avanzadas para tu website, recomendamos contactar a nuestro socio estratégico, Arquetipo. Ellos podrán ofrecerte soluciones personalizadas y avanzadas según tus necesidades específicas."
+      },
+      {
+        "title": "11.  Reembolso",
+        "content": "Si el cliente no responde por más de 7 días hábiles el proyecto no se continuara, en caso contrario si Gaby no responde o envía la información pautada en los 7 días hábiles el cliente puede solicitar un reembolso el cual tendrá un plazo de 30 días para recibirlo, Si el cliente no se encuentra satisfecho con la propuesta presentada, se hará otra reunión de Recap de información para analizar la información proporcionada y lo propuesto. "
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "about": {
+    "title": "Hola, Soy Gaby!",
+    "content1": "Todos sabemos que empezar un nuevo proyecto no es fácil. No solo significa tener un dream de emprender con algo, sino también ejecutarlo. A veces, la procrastinación nos gana, pero otras, es nuestro budget el que nos frena.",
+    "content2": " Por eso, he creado estos dos packages que son ideales para ti, para darte ese boost y empezar a darle vida a tu sueño."
+  },
+  "plans": {
+    "title": "Create your dream brand with me!",
+    "subtitle": "Si estás listx para dejar atrás las excusas y comenzar con tu marca, esto te va a interesar."
+  },
+  "marquee": {
+    "titles": [
+      "Your dream brand with me!",
+      "Believe in your project",
+      "Stunning Design",
+      "Empower Your Dreams",
+      "Unlock Your Potential"
+    ]
+  },
+  "infoSection":{
+    "title": "Cómo saber si es para tí.",
+    "subtitle1": "No es para todos, lo entendemos. La idea es que empieces tu marca con una base sólida y hagas crecer esos sueños.",
+    "subtitle2": "Te dejo una lista de los sí y de los no para saber si estos productos son para tí.",
+    "infoTitle1": "Este paquete SI es para ti, sí: ",
+    "infoTitle2": "Este paquete NO es para ti, si: ",
+    "infoContent1": [
+      "Si sueñas con una marca que refleje tu grandeza y brille con autenticidad.",
+      "Perfecto para quienes comienzan su marca personal o para small brands que quieren establecer una identidad sólida desde el principio, creando la base para un crecimiento continuo.",
+      "Si estás en la búsqueda de un precio accesible sin sacrificar la calidad del diseño, este paquete ofrece un equilibrio perfecto entre asequibilidad y excelencia creativa."
+    ],
+    "infoContent2": [
+      "Te gusta vivir en la procrastinación y no te importa la imagen que proyecta tu marca y cómo te ven tus clientes.",
+      "Si no estás dispuesto a invertir en el desarrollo y fortalecimiento de tu marca.",
+      "Si tu proyecto es más grande y necesita estrategias de branding más avanzadas y personalizadas. Te sugerimos explorar nuestras soluciones especializadas con nuestro Big Boss en arquetipo.us"
+    ]
+  },
+  "projectSection":{
+    "title": "They said yes to doing their brands with me!"
+  }
+}

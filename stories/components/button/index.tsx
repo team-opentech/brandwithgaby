@@ -6,8 +6,14 @@ interface ButtonProps {
 
 export const Button = ({styles, label, ...props}: ButtonProps) => {
   return (
-    <button className={styles} {...props}>
-      {label}
+    <button
+      onClick={props.onClick}
+      className={
+        styles + ' hover:scale-110 hover:transition-transform duration-[500ms]'
+      }
+      {...props}
+    >
+      <h5>{label}</h5>
     </button>
   );
 };
