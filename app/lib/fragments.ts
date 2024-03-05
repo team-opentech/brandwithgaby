@@ -100,3 +100,80 @@ export const CART_QUERY_FRAGMENT = `#graphql
     }
   }
 ` as const;
+
+export const PRODUCT_QUERY = `#graphql
+fragment ProductDetails on Product {
+  id
+  handle
+  description
+  descriptionHtml
+  priceRange {
+    maxVariantPrice {
+      amount
+      currencyCode
+    }
+  }
+  metafields(
+    identifiers: [{namespace: "custom", key: "price_text"}, {namespace: "custom", key: "date_delivery"}, {namespace: "custom", key: "subtitle"}]
+  ) {
+    id
+    namespace
+    key
+    value
+  }
+  variants(first: 10) {
+    nodes {
+      id
+    }
+  }
+}
+
+query ProductsQuery($country: CountryCode, $language: LanguageCode) @inContext(country: $country, language: $language) {
+  products(first: 10, sortKey: UPDATED_AT, reverse: false) {
+    nodes {
+      ...ProductDetails
+    }
+  }
+}
+
+` as const;
+
+export const CREATE_CART_MUTATION = `#graphql
+mutation MyMutation {
+  cartCreate {
+    cart {
+      checkoutUrl
+      id
+      cost {
+        totalAmount {
+          amount
+          currencyCode
+        }
+      }
+      totalQuantity
+      lines(first: 10) {
+        edges {
+          node {
+            id
+            merchandise {
+              ... on ProductVariant {
+                id
+                price {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+            quantity
+          }
+        }
+      }
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}
+` as const;

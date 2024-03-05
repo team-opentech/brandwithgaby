@@ -1,6 +1,8 @@
+import {CartForm} from '@shopify/hydrogen';
 import {Button} from '../button';
 import parse, {domToReact} from 'html-react-parser';
 import React from 'react';
+import {CartLineInput} from '@shopify/hydrogen/storefront-api-types';
 
 interface ServiceCardProps {
   title: string;
@@ -10,6 +12,8 @@ interface ServiceCardProps {
   dues: string;
   include: string; // Ahora es una string directamente
   time: string;
+  variantId: string;
+  quantity: number;
 }
 
 export const ServiceCard = ({
@@ -20,6 +24,8 @@ export const ServiceCard = ({
   dues,
   include,
   time,
+  variantId,
+  quantity,
 }: ServiceCardProps) => {
   // Función para transformar los elementos <li> y agregar SVG
 
@@ -99,6 +105,9 @@ export const ServiceCard = ({
           <Button
             styles="justify-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
             label="¡Comencemos!"
+            onClick={() => {
+              window.location.href = `/cart/${variantId}:${quantity}`;
+            }}
           />
         </div>
       </div>

@@ -14,6 +14,7 @@ import {InfoCard} from '../../stories/components/InfoCard';
 import {ProyectSlider} from '../../stories/components/ProyectSlider';
 import {Button} from '../../stories/components/button';
 import Text from '../../src/texts/landing.json';
+import {PRODUCT_QUERY} from '~/lib/fragments';
 
 export const meta: MetaFunction = () => {
   return [{title: 'Brand with Gaby'}];
@@ -22,10 +23,7 @@ export const meta: MetaFunction = () => {
 export async function loader({context}: LoaderFunctionArgs) {
   const {storefront} = context;
   const {products} = await storefront.query(PRODUCT_QUERY);
-  // const featuredCollection = collections.nodes[0];
-  // const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
-  // return defer({featuredCollection, recommendedProducts});
   return defer({products});
 }
 
@@ -144,12 +142,14 @@ export default function Homepage() {
                 <ServiceCard
                   key={p.id}
                   title={p.handle}
-                  subtitle={p.subtitle.value}
+                  subtitle={p.metafields[2].value}
                   price={p.priceRange.maxVariantPrice.amount}
-                  time={p.date_delivery.value}
+                  time={p.metafields[1].value}
                   servicesList={servicesList}
-                  dues={p.price_text.value}
+                  dues={p.metafields[0].value}
                   include={includes}
+                  variantId={p.variants.nodes[0].id.split('/')[4]}
+                  quantity={1}
                 />
               </div>
             );
@@ -165,12 +165,14 @@ export default function Homepage() {
               <ServiceCard
                 key={p.id}
                 title={p.handle}
-                subtitle={p.subtitle.value}
+                subtitle={p.metafields[2].value}
                 price={p.priceRange.maxVariantPrice.amount}
-                time={p.date_delivery.value}
+                time={p.metafields[1].value}
                 servicesList={servicesList}
-                dues={p.price_text.value}
+                dues={p.metafields[0].value}
                 include={includes}
+                variantId={p.variants.nodes[0].id.split('/')[4]}
+                quantity={1}
               />
             );
           })}
@@ -358,42 +360,4 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
       }
     }
   }
-` as const;
-
-const PRODUCT_QUERY = `#graphql
-query PRODUCT_QUERY {
-  products(first: 10) {
-    nodes {
-      id
-      handle
-      description
-      descriptionHtml
-      priceRange {
-        maxVariantPrice {
-          amount
-          currencyCode
-        }
-      }
-      price_text:metafield(key: "price_text", namespace: "custom") {
-        id
-        value
-        namespace
-        key
-      }
-      
-			date_delivery:metafield(key: "date_delivery", namespace: "custom") {
-        id
-        value
-        namespace
-        key
-      }
-      subtitle:metafield(key: "subtitle", namespace: "custom") {
-        id
-        value
-        namespace
-        key
-      }
-    }
-  }
-}
 ` as const;
