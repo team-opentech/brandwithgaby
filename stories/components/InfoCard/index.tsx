@@ -25,7 +25,9 @@ export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
                 <CrossBlack />
               </div>
             )}
-            <h4 className="flex text-left w-[90%]">{desc}</h4>
+            <h4 className="flex text-left w-[90%] font-BricolageGrotesque">
+              {desc}
+            </h4>
           </span>
         ))}
       </div>

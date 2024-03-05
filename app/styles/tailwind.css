@@ -32,11 +32,16 @@
     @apply text-[18px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque;
   }
 
+
   h6 {
     @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
   }
   p {
     @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
+  }
+
+  #gabyb p {
+    @apply text-[16px] leading-loose tracking-wider font-normal font-Chakra;
   }
 
   #dues span {
@@ -49,6 +54,10 @@
 
   #servicesLists p{
     @apply text-[13px] leading-loose tracking-wider font-normal font-Chakra;
+  }
+
+  #gabyb h5{
+    @apply text-[18px] leading-[25px] tracking-wider font-light font-BricolageGrotesque;
   }
 
   li {
