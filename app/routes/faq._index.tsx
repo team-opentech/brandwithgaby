@@ -11,16 +11,23 @@ export default function Faq() {
     <div className="relative bg-white w-full h-full lg:p-[10svw] flex flex-col justify-center items-center space-y-[4svw]">
       <div className="flex flex-col justify-center items-center w-full space-y-[2svw]">
         <img src="/Q&A-logo.svg" alt="no-source" />
-        <h1 className="underline"> Preguntas Frecuentes </h1>
+        <h1> Preguntas Frecuentes </h1>
       </div>
       <div className="w-full max-w-[380px] lg:max-w-[687px] flex flex-col justify-center items-center">
         {data.FAQ.map((acord, index) => (
           <Acordeon key={index} title={acord.question}>
-            <div className="w-full px-[10px] py-[10px] flex-col justify-center items-center space-y-[0.5svw]">
+            <div
+              id="gabyb"
+              className="w-full px-[10px] pt-[40px] pb-[60px] flex-col justify-center items-center space-y-[0.5svw]"
+            >
               <p>{acord.answer}</p>
-              {acord.list?.map((point, i) => (
-                <p key={i}>* {point}</p>
-              ))}
+              <ul className="pl-[15px] list-disc">
+                {acord.list?.map((point, i) => (
+                  <li key={i}>
+                    <p>{point}</p>
+                  </li>
+                ))}
+              </ul>
               <p>
                 {acord.afterAnswer}{' '}
                 <a className="underline" href={acord.link?.url}>
