@@ -64,17 +64,17 @@ export default function Homepage() {
         />
         <div
           id="gabyb"
-          className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[80px] lg:py-[2vw] px-[6vw]"
+          className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[30px] lg:py-[2vh] px-[6vw]"
         >
-          <h1 className="text-black mb-[6vh] lg:mb-[14vh]">
+          <h1 className="text-black mb-[3vh] lg:mb-[10vh]">
             Hola,
-            <br /> soy Gaby!
+            <br /> Soy Gaby!
           </h1>
           <Button
             styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
           />
-          <p className="text-black max-w-[331px] lg:max-w-[510px]">
+          <p className="text-black max-w-[331px] lg:max-w-[510px] mx-auto">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
             significa tener un dream de emprender con algo, sino también
             ejecutarlo. A veces, la procrastinación nos gana, pero otras, es
@@ -85,17 +85,20 @@ export default function Homepage() {
           </p>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1650px] lg:h-[1350px] space-y-[80px] flex-col justify-center items-center">
+      <div className="flex bg-[#EBECE7] w-full h-[1650px] lg:h-[1350px] space-y-[30px] flex-col justify-center items-center">
         <div className="flex flex-col space-y-[30px] justify-center items-center">
-          <h1 className="max-w-[342px] lg:max-w-none text-center mt-[50px]">
+          <h1 className="hidden max-w-[342px] lg:max-w-none text-center mt-[50px] lg:flex">
             Create your dream brand with me!
           </h1>
-          <p className="max-w-[342px] lg:max-w-none tracking-normal leading-[20px] lg:leading-[1.5svw] text-center">
+          <h2 className="max-w-[342px] lg:max-w-none text-center mt-[50px] leading-[46px] lg:hidden">
+            Create your dream brand with me!
+          </h2>
+          <h4 className="max-w-[359px] lg:max-w-none tracking-normal text-center">
             Si estás listx para dejar atrás las excusas y comenzar con tu marca,
             esto te va a interesar.
-          </p>
+          </h4>
         </div>
-        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[40px] py-[30px]">
+        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[30px]">
           {data.products.nodes.map((p: any) => {
             return (
               <Button
@@ -104,7 +107,7 @@ export default function Homepage() {
                   p.id === projectID
                     ? 'bg-black text-white'
                     : 'bg-none text-black'
-                } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
+                } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black capitalize`}
                 label={p.handle}
                 onClick={() => {
                   setShow(true);
