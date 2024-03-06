@@ -38,6 +38,9 @@
 
   h5 {
     @apply text-[18px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque;
+    @media screen and (max-width: 1024px) {
+      @apply text-[15px] leading-[22px] tracking-wider font-normal font-BricolageGrotesque;
+    }
   }
 
 
@@ -79,5 +82,11 @@
 
   li {
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+  }
+  #faqq{
+    @apply text-[15px] leading-[27px] tracking-wider font-normal text-left font-BricolageGrotesque;
+  }
+  #faqa{
+    @apply text-[15px] leading-[27px] tracking-wider font-normal text-left font-Inter;
   }
 }

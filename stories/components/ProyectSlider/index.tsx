@@ -31,26 +31,24 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
       <div className="self-center relative flex space-x-[50px]">
         <div className="w-max flex flex-row animate-marquee space-x-[50px]">
           {images?.map((img, index) => (
-            <>
+            <div key={index}>
               <img
-                key={index}
                 src={img}
                 alt={`banner-${index}`}
                 className={`w-[282.68px] rounded rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
               />
-            </>
+            </div>
           ))}
         </div>
         <div className="w-max absolute top-0 flex flex-row animate-marquee2  space-x-[50px]">
           {images?.map((img, index) => (
-            <>
+            <div key={index}>
               <img
-                key={index}
                 src={img}
                 alt={`banner-${index}`}
                 className={`w-[282.68px] rounded rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
               />
-            </>
+            </div>
           ))}
         </div>
       </div>
