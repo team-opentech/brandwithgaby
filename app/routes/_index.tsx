@@ -58,10 +58,10 @@ export default function Homepage() {
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+      <div className="w-full flex lg:h-[818px] flex-col lg:flex-row justify-center items-center">
         <img
           src={'/ImagesLanding2.webp'}
-          className="object-cover w-full lg:w-[50%]"
+          className="object-cover lg:h-[818px] w-full lg:w-[50%]"
           alt="no source"
         />
         <div
@@ -70,7 +70,7 @@ export default function Homepage() {
         >
           <h1 className="text-black mb-[6vh] lg:mb-[14vh]">
             Hola,
-            <br /> soy Gaby!
+            <br /> Soy Gaby!
           </h1>
           <Button
             styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
