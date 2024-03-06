@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap');
 
 @font-face {
   font-family: "BricolageGrotesque";
   src: url("../../public/fonts/BricolageGrotesque-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Chakra";
+  src: url("../../public/fonts/ChakraPetch-Regular.ttf");
+}
+
+
 @layer base {
   /* ... */
   h1 {
@@ -30,6 +38,9 @@
 
   h5 {
     @apply text-[18px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque;
+    @media screen and (max-width: 1024px) {
+      @apply text-[15px] leading-[22px] tracking-wider font-normal font-BricolageGrotesque;
+    }
   }
 
 
@@ -43,17 +54,26 @@
   #gabyb p {
     @apply text-[16px] leading-loose tracking-wider font-normal font-Chakra;
   }
+  /* #dues li {
+    @apply flex flex-row flex-1 flex-nowrap w-full items-center;
+  } */
 
-  #dues span {
-    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+
+  #dues li span {
+    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Inter text-[#9B9B9B];
   }
 
   #dues p {
-    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+    @apply text-[13px] leading-[27px] tracking-wider font-normal font-Inter;
+  }
+
+  #dues li {
+    @apply text-[16px] leading-[27px] tracking-wider font-normal font-Chakra;
   }
 
   #servicesLists p{
-    @apply text-[13px] leading-loose tracking-wider font-normal font-Chakra;
+    @apply text-[13px] leading-loose tracking-wider font-normal font-Inter;
+
   }
 
   #gabyb h5{
@@ -62,5 +82,11 @@
 
   li {
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Chakra;
+  }
+  #faqq{
+    @apply text-[15px] leading-[27px] tracking-wider font-normal text-left font-BricolageGrotesque;
+  }
+  #faqa{
+    @apply text-[15px] leading-[27px] tracking-wider font-normal text-left font-Inter;
   }
 }
