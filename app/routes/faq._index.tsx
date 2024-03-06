@@ -25,7 +25,7 @@ export default function Faq() {
           <Acordeon key={index} title={acord.question}>
             <div className="w-full px-[10px] pt-[40px] pb-[60px] flex-col justify-center items-center space-y-[25px] text-left">
               <p id="faqa">{acord.answer}</p>
-              <ul className="pl-[15px] list-disc">
+              <ul className="ml-[20px] list-disc">
                 {acord.list?.map((point, i) => (
                   <li key={i}>
                     <p id="faqa">{point}</p>

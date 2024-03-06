@@ -1158,7 +1158,7 @@ export type SearchQuery = {
 };
 
 interface GeneratedQueryTypes {
-  '#graphql\nfragment ProductDetails on Product {\n  id\n  handle\n  description\n  descriptionHtml\n  priceRange {\n    maxVariantPrice {\n      amount\n      currencyCode\n    }\n  }\n  metafields(\n    identifiers: [{namespace: "custom", key: "price_text"}, {namespace: "custom", key: "date_delivery"}, {namespace: "custom", key: "subtitle"}]\n  ) {\n    id\n    namespace\n    key\n    value\n  }\n  variants(first: 10) {\n    nodes {\n      id\n    }\n  }\n}\n\nquery ProductsQuery($country: CountryCode, $language: LanguageCode) @inContext(country: $country, language: $language) {\n  products(first: 10, sortKey: UPDATED_AT, reverse: false) {\n    nodes {\n      ...ProductDetails\n    }\n  }\n}\n\n': {
+  '#graphql\nfragment ProductDetails on Product {\n  id\n  handle\n  description\n  descriptionHtml\n  priceRange {\n    maxVariantPrice {\n      amount\n      currencyCode\n    }\n  }\n  metafields(\n    identifiers: [{namespace: "custom", key: "price_text"}, {namespace: "custom", key: "date_delivery"}, {namespace: "custom", key: "subtitle"}]\n  ) {\n    id\n    namespace\n    key\n    value\n  }\n  variants(first: 10) {\n    nodes {\n      id\n    }\n  }\n}\n\nquery ProductsQuery($country: CountryCode, $language: LanguageCode) @inContext(country: $country, language: $language) {\n  products(first: 10, sortKey: UPDATED_AT, reverse: true) {\n    nodes {\n      ...ProductDetails\n    }\n  }\n}\n\n': {
     return: ProductsQueryQuery;
     variables: ProductsQueryQueryVariables;
   };

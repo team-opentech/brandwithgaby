@@ -33,7 +33,7 @@ export default function Homepage() {
   const [projectID, setProjectID] = useState(data.products.nodes[0].id);
 
   return (
-    <div className="w-screen h-full pb-[10%] lg:p-0 overscroll-x-none overflow-hidden">
+    <div className="w-screen h-full lg:p-0 overscroll-x-none overflow-hidden">
       <BannerSlider
         images={[
           '/banner02.webp',
@@ -98,7 +98,7 @@ export default function Homepage() {
             esto te va a interesar.
           </h4>
         </div>
-        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[30px]">
+        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[20px]">
           {data.products.nodes.map((p: any) => {
             return (
               <Button
@@ -117,7 +117,7 @@ export default function Homepage() {
             );
           })}
         </div>
-        <div className="h-full flex lg:hidden flex-row justify-center">
+        <div className="h-full flex lg:hidden flex-row">
           {data.products.nodes.map((p: any, index: number) => {
             const descriptionHtml = p.descriptionHtml;
             const parts = descriptionHtml.split('---split---');
@@ -171,14 +171,14 @@ export default function Homepage() {
       </div>
       <Marquesina text={Text.marquee.titles} />
       <div className="flex bg-white w-full h-full lg:h-[850px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
-        <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[90px] justify-center items-center">
+        <div className="flex flex-col space-y-[30px] mt-[60px] lg:mt-[90px] justify-center items-center">
           <h1 className="max-w-[276px] text-[36px] lg:text-[45px] leading-[46px] lg:max-w-none text-center">
             Cómo saber si es para tí.
           </h1>
-          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[20px] lg:leading-[1.5svw] text-center">
+          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[20px] lg:leading-[20px] text-center font-normal">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
-            <br /><br />
+            <br /> <br />
             Te dejo una lista de los sí y de los no para saber si estos
             productos son para tí
           </h4>
@@ -222,7 +222,7 @@ export default function Homepage() {
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-auto lg:min-h-[810px] space-y-[80px] flex-col justify-center items-center">
+      <div className="flex bg-[#EBECE7] w-full h-auto lg:min-h-[810px] space-y-[80px] flex-col justify-center items-center pb-[15%] lg:pb-0">
         <h2 className="mt-[80px] hidden lg:flex">
           They said yes to doing their brands with me!
         </h2>

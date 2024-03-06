@@ -50,7 +50,7 @@ export const ServiceCard = ({
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
   return (
-    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col mt-12">
+    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col lg:mt-12">
       <img
         src="/Service-Icon-1.svg"
         alt="Logo"

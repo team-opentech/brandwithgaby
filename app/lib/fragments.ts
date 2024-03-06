@@ -129,7 +129,7 @@ fragment ProductDetails on Product {
 }
 
 query ProductsQuery($country: CountryCode, $language: LanguageCode) @inContext(country: $country, language: $language) {
-  products(first: 10, sortKey: UPDATED_AT, reverse: false) {
+  products(first: 10, sortKey: UPDATED_AT, reverse: true) {
     nodes {
       ...ProductDetails
     }
