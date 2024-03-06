@@ -22,14 +22,11 @@ export function Layout({children = null, footer, header}: LayoutProps) {
   return (
     <>
       <Header />
-      <main className="w-[100dvw] overscroll-x-none overflow-hidden">
+      <main className="w-[100svw] overscroll-x-none overflow-hidden">
         {children}
       </main>
-      <Suspense>
-        <Await resolve={footer}>
-          <Footer />
-        </Await>
-      </Suspense>
+      <Footer />
+
     </>
   );
 }

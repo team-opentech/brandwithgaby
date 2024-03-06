@@ -3,7 +3,7 @@ import {Button} from '../button';
 export const Navbar = () => {
   return (
     <header className="lg:px-[12svw] fixed w-screen h-[16%] max-h-[100px] bg-[#EBECE7] flex flex-row justify-center lg:justify-between items-center overscroll-x-none overflow-hidden z-50">
-      <div className="hidden lg:flex min-w-[40px] h-full"></div>
+      <div className="hidden lg:flex min-w-[15%] h-full"></div>
       <a href="/">
         <img
           className="w-full max-w-[270px] lg:max-w-[227px]"
