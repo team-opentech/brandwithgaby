@@ -55,6 +55,7 @@
     @apply flex flex-row flex-1 flex-nowrap w-full items-center;
   } */
 
+
   #dues li span {
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Inter text-[#9B9B9B];
   }
@@ -63,8 +64,13 @@
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Inter;
   }
 
+  #dues li {
+    @apply text-[16px] leading-[27px] tracking-wider font-normal font-Chakra;
+  }
+
   #servicesLists p{
     @apply text-[13px] leading-loose tracking-wider font-normal font-Inter;
+
   }
 
   #gabyb h5{

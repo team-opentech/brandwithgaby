@@ -56,10 +56,10 @@ export default function Homepage() {
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+      <div className="w-full flex lg:h-[818px] flex-col lg:flex-row justify-center items-center">
         <img
           src={'/ImagesLanding2.webp'}
-          className="object-cover w-full lg:w-[50%]"
+          className="object-cover lg:h-[818px] w-full lg:w-[50%]"
           alt="no source"
         />
         <div
@@ -184,13 +184,13 @@ export default function Homepage() {
       <Marquesina text={Text.marquee.titles} />
       <div className="flex bg-white w-full h-full lg:h-[850px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
         <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[90px] justify-center items-center">
-          <h1 className="max-w-[276px] lg:max-w-none text-center">
+          <h1 className="max-w-[276px] text-[36px] lg:text-[45px] lg:max-w-none text-center">
             Cómo saber si es para tí.
           </h1>
-          <h4 className="max-w-[359px] font-BricolageGrotesque lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+          <h4 className="max-w-[359px] font-BricolageGrotesque lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[20px] lg:leading-[1.5svw] text-center">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
-            <br />
+            <br /><br/>
             Te dejo una lista de los sí y de los no para saber si estos
             productos son para tí
           </h4>

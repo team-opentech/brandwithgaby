@@ -48,7 +48,7 @@ export const ServiceCard = ({
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
   return (
-    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col pb-12">
+    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col mb-12">
       <img
         src="/Service-Icon-1.svg"
         alt="Logo"
@@ -75,7 +75,6 @@ export const ServiceCard = ({
       <div className="h-[50%] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
         <div
           id="servicesLists"
-          className="font-Inter font-[400] text-[16px] leading-[27px]"
           dangerouslySetInnerHTML={{__html: servicesList}}
         />
       </div>
@@ -88,7 +87,7 @@ export const ServiceCard = ({
       <div className="h-full w-full bg-white p-[5%] lg:p-0 lg:px-[1.5vw] lg:py-[20.376px]  flex flex-col justify-start items-start border border-b-black">
         <div
           id="dues"
-          className="font-Inter font-[500] text-[13px] leading-[27px]"
+          className="font-Inter font-[500] text-[16px] leading-[27px]"
         >
           {includesWithSVG}
         </div>
