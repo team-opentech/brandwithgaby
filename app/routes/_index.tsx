@@ -56,7 +56,7 @@ export default function Homepage() {
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="w-full flex lg:h-[818px] flex-col lg:flex-row justify-center items-center">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center max-h-[818px] overflow-hidden">
         <img
           src={'/ImagesLanding2.webp'}
           className="object-cover lg:h-[818px] w-full lg:w-[50%]"
@@ -74,7 +74,7 @@ export default function Homepage() {
             styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
           />
-          <p className="text-black max-w-[331px] lg:max-w-[510px] mx-auto">
+          <h4 className="text-black max-w-[331px] lg:max-w-[510px] mx-auto lg:mx-0">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
             significa tener un dream de emprender con algo, sino también
             ejecutarlo. A veces, la procrastinación nos gana, pero otras, es
@@ -82,10 +82,10 @@ export default function Homepage() {
             <br /> <br />
             Por eso, he creado estos dos packages que son ideales para ti, para
             darte ese boost y empezar a darle vida a tu sueño.
-          </p>
+          </h4>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1650px] lg:h-[1350px] space-y-[30px] flex-col justify-center items-center">
+      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center lg:py-[5%]">
         <div className="flex flex-col space-y-[30px] justify-center items-center">
           <h1 className="hidden max-w-[342px] lg:max-w-none text-center mt-[50px] lg:flex">
             Create your dream brand with me!
@@ -116,23 +116,9 @@ export default function Homepage() {
               />
             );
           })}
-          {/* <Button
-            styles={`${
-              !show ? 'bg-none text-black' : 'bg-black text-white'
-            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
-            label="Kickstar"
-            onClick={() => setShow(true)}
-          />
-          <Button
-            styles={`${
-              show ? 'bg-none text-black' : 'bg-black text-white'
-            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
-            label="Launchboost"
-            onClick={() => setShow(false)}
-          /> */}
         </div>
         <div className="h-full flex lg:hidden flex-row justify-center">
-          {data.products.nodes.map((p: any) => {
+          {data.products.nodes.map((p: any, index: number) => {
             const descriptionHtml = p.descriptionHtml;
             const parts = descriptionHtml.split('---split---');
             const servicesList = parts[0];
@@ -143,6 +129,7 @@ export default function Homepage() {
                 className={`${p.id === projectID ? 'flex' : 'hidden'}`}
               >
                 <ServiceCard
+                  index={index}
                   key={p.id}
                   title={p.handle}
                   subtitle={p.metafields[2].value}
@@ -158,14 +145,15 @@ export default function Homepage() {
             );
           })}
         </div>
-        <div className="mt-[90px] max-h-[1054px] h-full hidden lg:flex flex-row space-x-[80px] justify-center items-center">
-          {data.products.nodes.map((p: any) => {
+        <div className="mt-[90px] max-h-[1054px] h-full hidden lg:mt-[10%] lg:flex flex-row space-x-[80px] justify-center items-center">
+          {data.products.nodes.map((p: any, index: number) => {
             const descriptionHtml = p.descriptionHtml;
             const parts = descriptionHtml.split('---split---');
             const servicesList = parts[0];
             const includes = parts[1];
             return (
               <ServiceCard
+                index={index}
                 key={p.id}
                 title={p.handle}
                 subtitle={p.metafields[2].value}
