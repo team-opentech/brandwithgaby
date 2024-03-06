@@ -8,27 +8,31 @@ export const meta: MetaFunction = () => {
 
 export default function Faq() {
   return (
-    <div className="relative bg-white w-full h-full lg:p-[10svw] flex flex-col justify-center items-center space-y-[4svw]">
-      <div className="flex flex-col justify-center items-center w-full space-y-[2svw]">
+    <div className="relative bg-white w-full h-full pt-[30%] lg:p-[10svw] flex flex-col justify-center items-center space-y-[4svw]">
+      <div className="flex flex-col justify-center items-center w-full space-y-[2svw] mb-12 lg:mb-0">
         <img src="/Q&A-logo.svg" alt="no-source" />
-        <h1> Preguntas Frecuentes </h1>
+        <h3 className="underline text-center lg:hidden">
+          {' '}
+          Preguntas Frecuentes{' '}
+        </h3>
+        <h1 className="underline text-center hidden lg:flex">
+          {' '}
+          Preguntas Frecuentes{' '}
+        </h1>
       </div>
       <div className="w-full max-w-[380px] lg:max-w-[687px] flex flex-col justify-center items-center">
         {data.FAQ.map((acord, index) => (
           <Acordeon key={index} title={acord.question}>
-            <div
-              id="gabyb"
-              className="w-full px-[10px] pt-[40px] pb-[60px] flex-col justify-center items-center space-y-[0.5svw]"
-            >
-              <p>{acord.answer}</p>
+            <div className="w-full px-[10px] pt-[40px] pb-[60px] flex-col justify-center items-center space-y-[25px] text-left">
+              <p id="faqa">{acord.answer}</p>
               <ul className="pl-[15px] list-disc">
                 {acord.list?.map((point, i) => (
                   <li key={i}>
-                    <p>{point}</p>
+                    <p id="faqa">{point}</p>
                   </li>
                 ))}
               </ul>
-              <p>
+              <p id="faqa">
                 {acord.afterAnswer}{' '}
                 <a className="underline" href={acord.link?.url}>
                   {acord.link?.text}
