@@ -14,6 +14,7 @@ interface ServiceCardProps {
   time: string;
   variantId: string;
   quantity: number;
+  index: number;
 }
 
 export const ServiceCard = ({
@@ -26,6 +27,7 @@ export const ServiceCard = ({
   time,
   variantId,
   quantity,
+  index,
 }: ServiceCardProps) => {
   // Función para transformar los elementos <li> y agregar SVG
 
@@ -48,13 +50,22 @@ export const ServiceCard = ({
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
   return (
-    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col mb-12">
+    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col mt-12">
       <img
         src="/Service-Icon-1.svg"
         alt="Logo"
         className={
-          title == 'kickstar'
-            ? 'absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-6%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
+          index === 0
+            ? 'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
+            : 'hidden'
+        }
+      />
+      <img
+        src="/Service-Icon-1.svg"
+        alt="Logo"
+        className={
+          title === 'kickstar'
+            ? 'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
             : 'hidden'
         }
       />
@@ -63,7 +74,7 @@ export const ServiceCard = ({
         src="/Service-Icon-2.svg"
         alt="Logo"
         className={
-          title == 'launchboost'
+          index === 1
             ? 'hidden lg:flex absolute right-[-40%] bottom-[25%] transform translate-x-2/4 translate-y-2/4 z-10'
             : 'hidden'
         }
