@@ -35,7 +35,7 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
               <img
                 src={img}
                 alt={`banner-${index}`}
-                className={`w-[282.68px] rounded rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
+                className={`w-[282.68px] rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
               />
             </div>
           ))}
@@ -46,7 +46,7 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
               <img
                 src={img}
                 alt={`banner-${index}`}
-                className={`w-[282.68px] rounded rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
+                className={`w-[282.68px] rounded-[6%] lg:w-[380px] h-full max-h-[327.31px] lg:max-h-[440px] object-cover object-center`}
               />
             </div>
           ))}

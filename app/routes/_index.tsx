@@ -85,12 +85,12 @@ export default function Homepage() {
           </h4>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center lg:py-[5%]">
+      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center lg:pt-[4%] lg:pb-[6%]">
         <div className="flex flex-col space-y-[30px] justify-center items-center">
-          <h1 className="hidden max-w-[342px] lg:max-w-none text-center mt-[50px] lg:flex">
+          <h1 className="hidden max-w-[342px] lg:max-w-none text-center lg:flex">
             Create your dream brand with me!
           </h1>
-          <h2 className="max-w-[342px] lg:max-w-none text-center mt-[50px] leading-[46px] lg:hidden">
+          <h2 className="max-w-[342px] lg:max-w-none text-center leading-[46px] lg:hidden">
             Create your dream brand with me!
           </h2>
           <h4 className="max-w-[359px] lg:max-w-none tracking-normal text-center">
@@ -222,7 +222,7 @@ export default function Homepage() {
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-auto lg:min-h-[810px] space-y-[80px] flex-col justify-center items-center pb-[15%] lg:pb-0">
+      <div className="flex bg-[#EBECE7] w-full h-auto lg:min-h-[750px] space-y-[80px] flex-col justify-center items-center pb-[15%] lg:pb-0">
         <h2 className="mt-[80px] hidden lg:flex">
           They said yes to doing their brands with me!
         </h2>
