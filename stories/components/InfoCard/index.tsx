@@ -14,7 +14,7 @@ export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
           left ? 'bg-black text-white' : 'bg-[#EBECE7] text-black'
         }`}
       >
-        <h3 className="text-[22px] lg:text-[26px]">{title}</h3>
+        <h3 className="text-[22px] lg:text-[26px] tracking-wide">{title}</h3>
       </div>
       <div className="flex flex-col w-[90%] items-center justify-center space-y-8 my-12 mx-auto">
         {description.map((desc, index) => (

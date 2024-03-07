@@ -12,7 +12,7 @@ export const Footer = () => {
               href="https://www.instagram.com/brandwithgaby/"
               rel="noreferrer"
             >
-              <p className="text-[22px] leading-[34px] tracking-wider font-Bricolage-Grotesque font-normal lg:text-[26px] lg:leading-[43px]">
+              <p className="text-[22px] leading-[34px] tracking-wider font-BricolageGrotesque font-normal lg:text-[26px] lg:leading-[43px]">
                 hey@brandwithgaby.com
               </p>
             </a>
@@ -21,7 +21,7 @@ export const Footer = () => {
               href="mailto:hey@brandwithgaby.com"
               rel="noreferrer"
             >
-              <p className="text-[22px] leading-[34px] tracking-wider font-Bricolage-Grotesque font-normal lg:text-[26px] lg:leading-[43px]">
+              <p className="text-[22px] leading-[34px] tracking-wider font-BricolageGrotesque font-normal lg:text-[26px] lg:leading-[43px]">
                 @brandwithgaby
               </p>
             </a>
@@ -34,15 +34,15 @@ export const Footer = () => {
         </a>
       </div>
       <div className="flex flex-col w-full h-auto items-center py-4 px-[6%] lg:space-y-0 lg:flex-row lg:px-[2%]">
-        <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide w-full lg:w-[25%]">
+        <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide w-full lg:w-[25%] font-BricolageGrotesque">
           © COPYRIGHT 2024 BRANDWITHGABY. ALL RIGHTS RESERVED.
         </p>
         <div className="flex flex-row justify-between w-full lg:w-[75%]">
-          <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide">
+          <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide font-BricolageGrotesque">
             A SISTER COMPANY OF ARQUETIPO
           </p>
           <a href="/terms">
-            <p className="text-[#656565] uppercase underline text-[10px] leading-[25px] tracking-wide cursor-pointer">
+            <p className="text-[#656565] uppercase underline text-[10px] leading-[25px] tracking-wide cursor-pointer font-BricolageGrotesque">
               Términos y Condiciones
             </p>
           </a>

@@ -46,10 +46,10 @@ export default function Homepage() {
         ]}
       />
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
-        <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
+        <div className="flex flex-row w-full items-center justify-evenly lg:justify-center lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
           <p
-            className={`flex uppercase text-white lg:tracking-[0.7rem] lg:font-thin`}
+            className={`flex text-[12px] leading-[46px] lg:text-[16px] uppercase text-white lg:tracking-[0.7rem] lg:font-thin font-Chakra tracking-[7px]`}
           >
             the brand of your dreams
           </p>
@@ -85,8 +85,8 @@ export default function Homepage() {
           </h4>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center lg:pt-[4%] lg:pb-[6%]">
-        <div className="flex flex-col space-y-[30px] justify-center items-center">
+      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[6%]">
+        <div className="flex flex-col space-y-[10px] justify-center items-center">
           <h1 className="hidden max-w-[342px] lg:max-w-none text-center lg:flex">
             Create your dream brand with me!
           </h1>
@@ -175,7 +175,7 @@ export default function Homepage() {
           <h1 className="max-w-[276px] text-[36px] lg:text-[45px] leading-[46px] lg:max-w-none text-center">
             Cómo saber si es para tí.
           </h1>
-          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[20px] lg:leading-[20px] text-center font-normal">
+          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[27px] lg:leading-[20px] text-center font-normal">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
             <br /> <br />
