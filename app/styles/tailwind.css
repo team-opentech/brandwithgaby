@@ -77,7 +77,7 @@ html{
   }
 
   #dues li {
-    @apply text-[16px] leading-[27px] tracking-wider font-normal font-Chakra;
+    @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter;
   }
 
   #servicesLists p{
