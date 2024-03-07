@@ -73,6 +73,10 @@ export default function Homepage() {
           <Button
             styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full ml-[20px] lg:ml-0 max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
+            onClick={() =>
+              (window.location.href =
+                'https://www.instagram.com/brandwithgaby/')
+            }
           />
           <h4 className="text-black max-w-[331px] lg:max-w-[510px] mx-auto md:mx-0">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
@@ -85,7 +89,7 @@ export default function Homepage() {
           </h4>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[6%]">
+      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[13%]">
         <div className="flex flex-col space-y-[10px] justify-center items-center">
           <h1 className="hidden max-w-[342px] lg:max-w-none text-center lg:flex">
             Create your dream brand with me!

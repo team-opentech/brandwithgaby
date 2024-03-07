@@ -2,7 +2,6 @@ import {CartForm} from '@shopify/hydrogen';
 import {Button} from '../button';
 import parse, {domToReact} from 'html-react-parser';
 import React from 'react';
-import {CartLineInput} from '@shopify/hydrogen/storefront-api-types';
 
 interface ServiceCardProps {
   title: string;
