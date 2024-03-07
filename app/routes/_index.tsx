@@ -117,6 +117,7 @@ export default function Homepage() {
                   setShow(true);
                   setProjectID(p.id);
                 }}
+                pulse={p.id === projectID ? false : true}
               />
             );
           })}
