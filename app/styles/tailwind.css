@@ -56,42 +56,29 @@ html{
   h6 {
     @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
   }
-  /* p {
-    @apply text-[16px] leading-[46px] tracking-wider font-normal font-Chakra;
-  } */
 
   #gabyb p {
     @apply text-[16px] leading-loose tracking-wider font-normal font-Chakra;
   }
-  /* #dues li {
-    @apply flex flex-row flex-1 flex-nowrap w-full items-center;
-  } */
-
 
   #dues li span {
     @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter text-[#9B9B9B];
   }
-
   #dues p {
     @apply text-[13px] leading-[27px] tracking-wider font-normal font-Inter;
   }
   #dues div span p {
     @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter;
   }
-
   #dues li {
     @apply text-[16px] leading-[27px] tracking-wider font-normal font-Inter;
   }
-
   #servicesLists p{
     @apply text-[16px] leading-loose tracking-wider font-normal font-Inter;
-
   }
-
   #gabyb h5{
     @apply text-[18px] leading-[25px] tracking-wider font-light font-BricolageGrotesque;
   }
-
   #faqq{
     @apply text-[15px] leading-[27px] tracking-wider font-normal text-left font-BricolageGrotesque;
   }
