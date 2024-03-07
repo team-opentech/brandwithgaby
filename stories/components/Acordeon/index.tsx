@@ -3,15 +3,16 @@ import React from 'react';
 interface AcordeonProps {
   title: string;
   children: React.ReactNode;
+  last: boolean;
 }
 
-export const Acordeon = ({title, children}: AcordeonProps) => {
+export const Acordeon = ({title, children, last}: AcordeonProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className={`flex flex-col w-full h-auto items-center justify-center`}>
       <button
         className={`flex w-full border-solid border-black px-2 py-4 lg:p-5 ${
-          isOpen ? 'border-y' : 'border-t'
+          isOpen || last ? 'border-y' : 'border-t'
         }`}
         onClick={() => setIsOpen(!isOpen)}
       >
