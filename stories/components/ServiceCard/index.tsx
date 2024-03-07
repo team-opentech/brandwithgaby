@@ -83,19 +83,19 @@ export const ServiceCard = ({
         <h2 className="text-white capitalize"> {title} </h2>
         <h4 className="text-white font-light"> {subtitle}</h4>
       </div>
-      <div className="h-[50%] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
+      <div className="min-h-fit lg:min-h-[235px] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
         <div
           id="servicesLists"
           dangerouslySetInnerHTML={{__html: servicesList}}
         />
       </div>
-      <div className="w-full bg-white p-[5%] lg:px-[1.5vw] lg:py-[20.376px]  flex flex-col justify-center items-start border border-b-black">
+      <div className="w-full bg-white p-[5%] lg:px-[1.5vw] lg:py-[20.376px] lg:min-h-[215px] flex flex-col justify-center items-start border border-b-black">
         <h3 className="text-black font-normal text-[26px] leading-[35px]">
           ${price}
         </h3>
         <h4 className="text-[#9B9B9B] leading-[35px]">{dues}</h4>
       </div>
-      <div className="h-full w-full bg-white p-[5%] lg:p-0 lg:px-[1.5vw] lg:py-[20.376px]  flex flex-col justify-start items-start border border-b-black">
+      <div className="h-full w-full bg-white p-[5%] lg:p-0 lg:px-[1.5vw] lg:py-[20.376px] lg:min-h-[425px] flex flex-col justify-start items-start border border-b-black">
         <div id="dues" className="font-Inter text-[13px] leading-[27px]">
           {includesWithSVG}
         </div>
