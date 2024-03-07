@@ -22,8 +22,12 @@ export default function Faq() {
       </div>
       <div className="w-full max-w-[380px] lg:max-w-[687px] flex flex-col justify-center items-center">
         {data.FAQ.map((acord, index) => (
-          <Acordeon key={index} title={acord.question}>
-            <div className="w-full px-[10px] pt-[40px] pb-[60px] flex-col justify-center items-center space-y-[25px] text-left">
+          <Acordeon
+            key={index}
+            title={acord.question}
+            last={index === data.FAQ.length - 1 ? true : false}
+          >
+            <div className="w-full px-[10px] pt-[3%] pb-[1%] flex-col justify-center items-center space-y-[25px] text-left">
               <p id="faqa">{acord.answer}</p>
               <ul className="ml-[20px] list-disc">
                 {acord.list?.map((point, i) => (
