@@ -4,7 +4,7 @@ import typographyPlugin from '@tailwindcss/typography';
 /** @type {import('tailwindcss').Config} */
 export default {
   theme: {
-    // Some useful comment
+    // Some useful comment 
     extend: {
       fontFamily: {
         BricolageGrotesque: ['BricolageGrotesque', 'sans-serif'],
