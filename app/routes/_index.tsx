@@ -175,7 +175,7 @@ export default function Homepage() {
           <h1 className="max-w-[276px] text-[36px] lg:text-[45px] leading-[46px] lg:max-w-none text-center">
             Cómo saber si es para tí.
           </h1>
-          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[27px] lg:leading-[20px] text-center font-normal">
+          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[27px] lg:leading-[15px] text-center font-normal">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
             <br /> <br />
@@ -223,9 +223,9 @@ export default function Homepage() {
         </div>
       </div>
       <div className="flex bg-[#EBECE7] w-full h-auto lg:min-h-[750px] space-y-[80px] flex-col justify-center items-center pb-[15%] lg:pb-0">
-        <h2 className="mt-[80px] hidden lg:flex">
+        <h1 className="mt-[80px] hidden lg:flex ">
           They said yes to doing their brands with me!
-        </h2>
+        </h1>
         <ProyectSlider
           images={[
             '/portfolio01.webp',
