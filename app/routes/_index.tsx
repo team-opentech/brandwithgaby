@@ -14,6 +14,7 @@ import {InfoCard} from '../../stories/components/InfoCard';
 import {ProyectSlider} from '../../stories/components/ProyectSlider';
 import {Button} from '../../stories/components/button';
 import Text from '../../src/texts/landing.json';
+import {PRODUCT_QUERY} from '~/lib/fragments';
 
 export const meta: MetaFunction = () => {
   return [{title: 'Brand with Gaby'}];
@@ -22,10 +23,7 @@ export const meta: MetaFunction = () => {
 export async function loader({context}: LoaderFunctionArgs) {
   const {storefront} = context;
   const {products} = await storefront.query(PRODUCT_QUERY);
-  // const featuredCollection = collections.nodes[0];
-  // const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
-  // return defer({featuredCollection, recommendedProducts});
   return defer({products});
 }
 
@@ -35,7 +33,7 @@ export default function Homepage() {
   const [projectID, setProjectID] = useState(data.products.nodes[0].id);
 
   return (
-    <div className="w-screen h-full p-0 overscroll-x-none overflow-hidden">
+    <div className="w-screen h-full lg:p-0 overscroll-x-none overflow-hidden">
       <BannerSlider
         images={[
           '/banner02.webp',
@@ -50,28 +48,33 @@ export default function Homepage() {
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
-          <p className={`flex uppercase text-white`}>
+          <p
+            className={`flex uppercase text-white lg:tracking-[0.7rem] lg:font-thin`}
+          >
             the brand of your dreams
           </p>
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row justify-center items-center">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center max-h-[818px] overflow-hidden">
         <img
           src={'/ImagesLanding2.webp'}
-          className="object-cover w-full lg:w-[50%]"
+          className="object-cover lg:h-[818px] w-full lg:w-[50%]"
           alt="no source"
         />
-        <div className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[80px] lg:py-[2vw] px-[6vw]">
-          <h1 className="text-black mb-[6vh] lg:mb-[14vh]">
+        <div
+          id="gabyb"
+          className="w-full lg:w-[50%] flex flex-col justify-center items-start py-[30px] lg:py-[2vh] px-[6vw]"
+        >
+          <h1 className="text-black mb-[3vh] lg:mb-[10vh]">
             Hola,
-            <br /> soy Gaby!
+            <br /> Soy Gaby!
           </h1>
           <Button
-            styles="bg-black text-white font-normal text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
+            styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
           />
-          <h4 className="text-black max-w-[331px] lg:max-w-[510px]">
+          <h4 className="text-black max-w-[331px] lg:max-w-[510px] mx-auto lg:mx-0">
             Todos sabemos que empezar un nuevo proyecto no es fácil. No solo
             significa tener un dream de emprender con algo, sino también
             ejecutarlo. A veces, la procrastinación nos gana, pero otras, es
@@ -82,17 +85,20 @@ export default function Homepage() {
           </h4>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1650px] space-y-[80px] flex-col justify-center items-center">
+      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center lg:py-[5%]">
         <div className="flex flex-col space-y-[30px] justify-center items-center">
-          <h1 className="max-w-[342px] lg:max-w-none text-center mt-[50px]">
+          <h1 className="hidden max-w-[342px] lg:max-w-none text-center mt-[50px] lg:flex">
             Create your dream brand with me!
           </h1>
-          <p className="max-w-[342px] lg:max-w-none tracking-normal leading-[20px] lg:leading-[1.5svw] text-center">
+          <h2 className="max-w-[342px] lg:max-w-none text-center mt-[50px] leading-[46px] lg:hidden">
+            Create your dream brand with me!
+          </h2>
+          <h4 className="max-w-[359px] lg:max-w-none tracking-normal text-center">
             Si estás listx para dejar atrás las excusas y comenzar con tu marca,
             esto te va a interesar.
-          </p>
+          </h4>
         </div>
-        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[40px] py-[30px]">
+        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[20px]">
           {data.products.nodes.map((p: any) => {
             return (
               <Button
@@ -101,7 +107,7 @@ export default function Homepage() {
                   p.id === projectID
                     ? 'bg-black text-white'
                     : 'bg-none text-black'
-                } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
+                } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black capitalize`}
                 label={p.handle}
                 onClick={() => {
                   setShow(true);
@@ -110,23 +116,9 @@ export default function Homepage() {
               />
             );
           })}
-          {/* <Button
-            styles={`${
-              !show ? 'bg-none text-black' : 'bg-black text-white'
-            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
-            label="Kickstar"
-            onClick={() => setShow(true)}
-          />
-          <Button
-            styles={`${
-              show ? 'bg-none text-black' : 'bg-black text-white'
-            } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black`}
-            label="Launchboost"
-            onClick={() => setShow(false)}
-          /> */}
         </div>
-        <div className="h-full flex lg:hidden flex-row justify-center">
-          {data.products.nodes.map((p: any) => {
+        <div className="h-full flex lg:hidden flex-row">
+          {data.products.nodes.map((p: any, index: number) => {
             const descriptionHtml = p.descriptionHtml;
             const parts = descriptionHtml.split('---split---');
             const servicesList = parts[0];
@@ -137,55 +129,61 @@ export default function Homepage() {
                 className={`${p.id === projectID ? 'flex' : 'hidden'}`}
               >
                 <ServiceCard
+                  index={index}
                   key={p.id}
                   title={p.handle}
-                  subtitle={p.subtitle.value}
+                  subtitle={p.metafields[2].value}
                   price={p.priceRange.maxVariantPrice.amount}
-                  time={p.date_delivery.value}
+                  time={p.metafields[1].value}
                   servicesList={servicesList}
-                  dues={p.price_text.value}
+                  dues={p.metafields[0].value}
                   include={includes}
+                  variantId={p.variants.nodes[0].id.split('/')[4]}
+                  quantity={1}
                 />
               </div>
             );
           })}
         </div>
-        <div className="mt-[90px] max-h-[1298px] h-full hidden lg:flex flex-row space-x-[80px] justify-center items-center">
-          {data.products.nodes.map((p: any) => {
+        <div className="mt-[90px] max-h-[1054px] h-full hidden lg:mt-[10%] lg:flex flex-row space-x-[80px] justify-center items-center">
+          {data.products.nodes.map((p: any, index: number) => {
             const descriptionHtml = p.descriptionHtml;
             const parts = descriptionHtml.split('---split---');
             const servicesList = parts[0];
             const includes = parts[1];
             return (
               <ServiceCard
+                index={index}
                 key={p.id}
                 title={p.handle}
-                subtitle={p.subtitle.value}
+                subtitle={p.metafields[2].value}
                 price={p.priceRange.maxVariantPrice.amount}
-                time={p.date_delivery.value}
+                time={p.metafields[1].value}
                 servicesList={servicesList}
-                dues={p.price_text.value}
+                dues={p.metafields[0].value}
                 include={includes}
+                variantId={p.variants.nodes[0].id.split('/')[4]}
+                quantity={1}
               />
             );
           })}
         </div>
       </div>
       <Marquesina text={Text.marquee.titles} />
-      <div className="flex bg-white w-full h-full lg:h-[950px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
-        <div className="flex flex-col space-y-[30px] mt-[90px] lg:mt-[140px] justify-center items-center">
-          <h1 className="max-w-[276px] lg:max-w-none text-center">
+      <div className="flex bg-white w-full h-full lg:h-[850px] space-y-[80px] flex-col justify-center items-center px-[5%] lg:px-0">
+        <div className="flex flex-col space-y-[30px] mt-[60px] lg:mt-[90px] justify-center items-center">
+          <h1 className="max-w-[276px] text-[36px] lg:text-[45px] leading-[46px] lg:max-w-none text-center">
             Cómo saber si es para tí.
           </h1>
-          <h4 className="max-w-[359px] lg:max-w-none leading-[20px] lg:leading-[1.5svw] text-center">
+          <h4 className="max-w-[359px] lg:max-w-none tracking-[.04rem] lg:tracking-[.05rem] leading-[20px] lg:leading-[20px] text-center font-normal">
             No es para todos, lo entendemos. La idea es que empieces tu marca
             con una base sólida y hagas crecer esos sueños.
-            <br />
+            <br /> <br />
             Te dejo una lista de los sí y de los no para saber si estos
             productos son para tí
           </h4>
         </div>
-        <div className="h-full flex flex-col lg:flex-row lg:mx-[60px] lg:space-x-[80px] justify-center items-center">
+        <div className="h-full lg:h-auto flex flex-col lg:flex-row lg:mx-[60px] lg:space-x-[80px] justify-center items-center">
           <InfoCard
             title="Este paquete SI es para ti, sí: "
             description={[
@@ -205,26 +203,26 @@ export default function Homepage() {
           />
         </div>
       </div>
-      <div className="flex bg-white w-full h-full py-[70px] lg:pt-[70px] lg:pb-[120px] space-y-[10px] lg:space-y-[15px] flex-col justify-center items-center">
+      <div className="flex bg-white w-full h-full pb-[50px] lg:pb-[100px] space-y-[10px] lg:space-y-[15px] flex-col justify-center items-center">
         <img src="/Q&A-logo.svg" alt="no-source" />
         <a href="/faq/">
           <p className="underline cursor-pointer text-center text-[26px] leading-[25px] tracking-wider font-normal font-BricolageGrotesque">
-            Preguntas frecuentes
+            Preguntas Frecuentes
           </p>
         </a>
       </div>
-      <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
+      <div className="hidden lg:flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
           <p
-            className={`flex text-[12px] lg:text-[16px]   uppercase text-white`}
+            className={`flex text-[12px] lg:text-[16px] lg:tracking-[0.7rem]   uppercase text-white`}
           >
             the brand of your dreams
           </p>
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full min-h-[560px] lg:min-h-[810px] space-y-[120px] flex-col justify-center items-center">
+      <div className="flex bg-[#EBECE7] w-full h-auto lg:min-h-[810px] space-y-[80px] flex-col justify-center items-center pb-[15%] lg:pb-0">
         <h2 className="mt-[80px] hidden lg:flex">
           They said yes to doing their brands with me!
         </h2>
@@ -353,42 +351,4 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
       }
     }
   }
-` as const;
-
-const PRODUCT_QUERY = `#graphql
-query PRODUCT_QUERY {
-  products(first: 10) {
-    nodes {
-      id
-      handle
-      description
-      descriptionHtml
-      priceRange {
-        maxVariantPrice {
-          amount
-          currencyCode
-        }
-      }
-      price_text:metafield(key: "price_text", namespace: "custom") {
-        id
-        value
-        namespace
-        key
-      }
-      
-			date_delivery:metafield(key: "date_delivery", namespace: "custom") {
-        id
-        value
-        namespace
-        key
-      }
-      subtitle:metafield(key: "subtitle", namespace: "custom") {
-        id
-        value
-        namespace
-        key
-      }
-    }
-  }
-}
 ` as const;

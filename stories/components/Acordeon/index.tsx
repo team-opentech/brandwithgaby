@@ -8,15 +8,15 @@ interface AcordeonProps {
 export const Acordeon = ({title, children}: AcordeonProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <div
-      className={`flex flex-col w-full h-auto space-y-6 items-center justify-center`}
-    >
+    <div className={`flex flex-col w-full h-auto items-center justify-center`}>
       <button
-        className="flex w-full border-y border-solid border-black p-5"
+        className={`flex w-full border-solid border-black px-2 py-4 lg:p-5 ${
+          isOpen ? 'border-y' : 'border-t'
+        }`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="flex flex-row w-full justify-between items-center">
-          <h5>{title}</h5>
+          <h5 id="faqq">{title}</h5>
           <div
             className={`${
               isOpen

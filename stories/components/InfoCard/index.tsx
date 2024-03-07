@@ -1,9 +1,12 @@
-interface InfoCardProps {
-  title: string;
-  description: string[];
-  left?: boolean;
-}
 export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
+  // Función para procesar cada descripción y convertir "arquetipo.us" en un hipervínculo
+  const processDescription = (desc: string) => {
+    return desc.replace(
+      /arquetipo.us/g,
+      '<a href="http://arquetipo.us" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; cursor: pointer;">arquetipo.us</a>',
+    );
+  };
+
   return (
     <div className="flex flex-col w-full h-full 2xl:max-w-[522px]">
       <div
@@ -25,7 +28,10 @@ export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
                 <CrossBlack />
               </div>
             )}
-            <h4 className="flex text-left w-[90%]">{desc}</h4>
+            <h4
+              className="text-left w-[85%]"
+              dangerouslySetInnerHTML={{__html: processDescription(desc)}}
+            ></h4>
           </span>
         ))}
       </div>

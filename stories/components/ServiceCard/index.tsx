@@ -1,6 +1,8 @@
+import {CartForm} from '@shopify/hydrogen';
 import {Button} from '../button';
 import parse, {domToReact} from 'html-react-parser';
 import React from 'react';
+import {CartLineInput} from '@shopify/hydrogen/storefront-api-types';
 
 interface ServiceCardProps {
   title: string;
@@ -10,6 +12,9 @@ interface ServiceCardProps {
   dues: string;
   include: string; // Ahora es una string directamente
   time: string;
+  variantId: string;
+  quantity: number;
+  index: number;
 }
 
 export const ServiceCard = ({
@@ -20,20 +25,23 @@ export const ServiceCard = ({
   dues,
   include,
   time,
+  variantId,
+  quantity,
+  index,
 }: ServiceCardProps) => {
   // Función para transformar los elementos <li> y agregar SVG
 
   const transformInclude = (node) => {
     if (node.type === 'tag' && node.name === 'li') {
       return (
-        <li className="flex w-full flex-row">
+        <li className="block font-Inter">
           <img
-            className="flex self-baseline pt-1"
-            src="/STAR-v2.svg"
+            className="inline-flex self-baseline"
+            src="/STAR-v2.svg" // Asegúrate de ajustar la ruta a tu SVG
             alt="Star"
             style={{marginRight: '5px'}}
           />
-          {domToReact(node.children)}
+          {domToReact(node.children, {replace: transformInclude})}
         </li>
       );
     }
@@ -42,13 +50,22 @@ export const ServiceCard = ({
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
   return (
-    <div className="relative h-[1053px] w-full max-w-[354px] rounded-lg lg:max-w-[419px] flex flex-col pb-12">
+    <div className="relative h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col lg:mt-12">
       <img
         src="/Service-Icon-1.svg"
         alt="Logo"
         className={
-          title == 'kickstar'
-            ? 'hidden lg:flex absolute top-[-6%] right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
+          index === 0
+            ? 'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
+            : 'hidden'
+        }
+      />
+      <img
+        src="/Service-Icon-1.svg"
+        alt="Logo"
+        className={
+          title === 'kickstar'
+            ? 'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
             : 'hidden'
         }
       />
@@ -57,45 +74,47 @@ export const ServiceCard = ({
         src="/Service-Icon-2.svg"
         alt="Logo"
         className={
-          title == 'launchboost'
+          index === 1
             ? 'hidden lg:flex absolute right-[-40%] bottom-[25%] transform translate-x-2/4 translate-y-2/4 z-10'
             : 'hidden'
         }
       />
-      <div className="w-full bg-black rounded-t-lg p-[3vw] lg:p-[2vw] flex flex-col justify-center items-start">
-        <h3 className="text-white capitalize"> {title} </h3>
-        <h4 className="text-white"> {subtitle}</h4>
+      <div className="w-full bg-black rounded-t-2xl p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px] flex flex-col justify-center items-start">
+        <h2 className="text-white capitalize"> {title} </h2>
+        <h4 className="text-white font-light"> {subtitle}</h4>
       </div>
-      <div className="h-[50%] 2xl:min-h-[18svw] w-full bg-white p-[3vw] lg:p-[1vw] border border-b-black flex flex-col justify-start items-start">
+      <div className="h-[50%] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
         <div
           id="servicesLists"
-          className="font-Inter font-[400] text-[16px] leading-[27px]"
           dangerouslySetInnerHTML={{__html: servicesList}}
         />
       </div>
-      <div className="w-full bg-white p-[3vw] lg:p-[1vw] flex flex-col justify-center items-start border border-b-black">
-        <p className="text-black font-bold text-[26px] leading-[35px]">
+      <div className="w-full bg-white p-[5%] lg:px-[1.5vw] lg:py-[20.376px]  flex flex-col justify-center items-start border border-b-black">
+        <h3 className="text-black font-normal text-[26px] leading-[35px]">
           ${price}
-        </p>
-        <p className="text-[#9B9B9B] leading-[35px]">{dues}</p>
+        </h3>
+        <h4 className="text-[#9B9B9B] leading-[35px]">{dues}</h4>
       </div>
-      <div className="h-full w-full bg-white p-[3vw] lg:p-[1vw] flex flex-col justify-start items-start border border-b-black">
+      <div className="h-full w-full bg-white p-[5%] lg:p-0 lg:px-[1.5vw] lg:py-[20.376px]  flex flex-col justify-start items-start border border-b-black">
         <div
           id="dues"
-          className="font-Inter font-[500] text-[13px] leading-[27px]"
+          className="font-Inter font-[500] text-[16px] leading-[27px]"
         >
           {includesWithSVG}
         </div>
       </div>
-      <div className="w-full min-h-[190px] bg-white p-[3vw] lg:p-[1vw] rounded-b-lg flex flex-col justify-center items-start space-y-[20px]">
-        <div className="w-full space-x-[25px] flex flex-row justify-start items-center">
+      <div className="w-full min-h-[190px] bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  rounded-b-2xl flex flex-col justify-center items-start space-y-[20px]">
+        <div className="w-full space-x-[15px] flex flex-row justify-start items-center mx-auto">
           <img src="/clock.svg" alt="*" />
-          <p className="text-black">{time}</p>
+          <h4 className="text-black">{time}</h4>
         </div>
         <div className="w-full flex flex-col justify-center items-center">
           <Button
             styles="justify-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
             label="¡Comencemos!"
+            onClick={() => {
+              window.location.href = `/cart/${variantId}:${quantity}`;
+            }}
           />
         </div>
       </div>
