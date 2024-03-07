@@ -33,7 +33,7 @@ export default function Homepage() {
   const [projectID, setProjectID] = useState(data.products.nodes[0].id);
 
   return (
-    <div className="w-screen h-full lg:p-0 overscroll-x-none overflow-hidden">
+    <div className="w-[100%] h-full lg:p-0 overscroll-x-none overflow-hidden">
       <BannerSlider
         images={[
           '/banner02.webp',
