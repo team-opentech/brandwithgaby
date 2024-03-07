@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         BricolageGrotesque: ['BricolageGrotesque', 'sans-serif'],
-        Inter: ['Inter', 'serif'],
+        Inter: ['Inter', 'sans-serif'],
         Chakra: ['Chakra Petch', 'sans-serif'],
       },
     },
