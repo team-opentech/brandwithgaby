@@ -56,7 +56,7 @@ export default function Homepage() {
           <img src="/STAR-v1.svg" alt="no-source" />
         </div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row justify-center items-center max-h-[818px] overflow-hidden">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-center lg:max-h-[818px] overflow-hidden">
         <img
           src={'/ImagesLanding2.webp'}
           className="object-cover lg:h-[818px] w-full lg:w-[50%]"
