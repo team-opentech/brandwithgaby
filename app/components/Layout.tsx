@@ -22,7 +22,7 @@ export function Layout({children = null, footer, header}: LayoutProps) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="w-[100%]">{children}</main>
       <Footer />
 
     </>
