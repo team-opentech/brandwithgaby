@@ -3,13 +3,13 @@ export const Footer = () => {
     <footer className="flex flex-col justify-center items-center w-full h-auto bg-[#EBECE7] overflow-hidden overscroll-x-none">
       <div className="w-full h-auto py-12 px-[7%] border-y border-solid border-black lg:py-14 lg:px-0">
         <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:px-[60px] xl:px-0 lg:mx-auto lg:justify-between 2xl:max-w-[1285px]">
-          <h1 className="max-sm:text-[40px] leading-[59px] tracking-wider">
+          <h1 className="max-sm:text-[36px] leading-[59px] tracking-wider">
             Let’s talk about it!
           </h1>
           <div className="flex flex-col">
             <a
               target="_blank"
-              href="https://www.instagram.com/brandwithgaby/"
+              href="mailto:hey@brandwithgaby.com"
               rel="noreferrer"
             >
               <p className="text-[22px] leading-[34px] tracking-wider font-BricolageGrotesque font-normal lg:text-[26px] lg:leading-[43px]">
@@ -18,7 +18,7 @@ export const Footer = () => {
             </a>
             <a
               target="_blank"
-              href="mailto:hey@brandwithgaby.com"
+              href="https://www.instagram.com/brandwithgaby/"
               rel="noreferrer"
             >
               <p className="text-[22px] leading-[34px] tracking-wider font-BricolageGrotesque font-normal lg:text-[26px] lg:leading-[43px]">
@@ -38,9 +38,11 @@ export const Footer = () => {
           © COPYRIGHT 2024 BRANDWITHGABY. ALL RIGHTS RESERVED.
         </p>
         <div className="flex flex-row justify-between w-full lg:w-[75%]">
-          <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide font-BricolageGrotesque">
-            A SISTER COMPANY OF ARQUETIPO
-          </p>
+          <a target="_blank" href="https://arquetipo.us/" rel="noreferrer">
+            <p className="text-[#656565] uppercase text-[10px] leading-[25px] underline tracking-wide font-BricolageGrotesque">
+              A SISTER COMPANY OF ARQUETIPO
+            </p>
+          </a>
           <a href="/terms">
             <p className="text-[#656565] uppercase underline text-[10px] leading-[25px] tracking-wide cursor-pointer font-BricolageGrotesque">
               Términos y Condiciones

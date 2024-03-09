@@ -64,14 +64,14 @@ export default function Homepage() {
         />
         <div
           id="gabyb"
-          className="w-full lg:w-[50%] flex flex-col items-start px-[6vw] pb-[10%] lg:pb-0"
+          className="w-[340px] mx-auto lg:mx-0 lg:w-[50%] flex flex-col items-start px-[6vw] pb-[10%] lg:pb-0"
         >
-          <h1 className="text-black mt-[10%] lg:mt-[15%] mb-[10%] lg:mb-[25%] px-[20px] lg:px-0">
+          <h1 className="text-black mt-[10%] lg:mt-[15%] mb-[10%] lg:mb-[25%]  lg:px-0">
             Hola,
             <br /> Soy Gaby!
           </h1>
           <Button
-            styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full ml-[20px] lg:ml-0 max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
+            styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full lg:ml-0 max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
             onClick={() =>
               (window.location.href =

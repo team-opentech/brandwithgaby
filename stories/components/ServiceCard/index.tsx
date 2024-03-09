@@ -51,31 +51,19 @@ export const ServiceCard = ({
   return (
     <div className="relative h-auto lg:h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col lg:mt-12">
       <img
-        src="/Service-Icon-1.svg"
+        src={index === 0 ? '/Service-Icon-1.svg' : '/Service-Icon-2.svg'}
         alt="Logo"
         className={
-          index === 0
-            ? 'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
-            : 'hidden'
+          'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
         }
       />
       <img
-        src="/Service-Icon-1.svg"
-        alt="Logo"
-        className={
-          title === 'kickstar'
-            ? 'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
-            : 'hidden'
+        src={
+          title === 'kickstar' ? '/Service-Icon-1.svg' : '/Service-Icon-2.svg'
         }
-      />
-
-      <img
-        src="/Service-Icon-2.svg"
         alt="Logo"
         className={
-          index === 1
-            ? 'hidden lg:flex absolute right-[-40%] bottom-[25%] transform translate-x-2/4 translate-y-2/4 z-10'
-            : 'hidden'
+          'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
         }
       />
       <div className="w-full bg-black rounded-t-2xl p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px] flex flex-col justify-center items-start">
