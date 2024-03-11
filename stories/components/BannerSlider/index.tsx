@@ -21,15 +21,17 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
         loop={true}
         spaceBetween={100}
       >
-        {images?.map((img, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={img}
-              alt={`banner-${index}`}
-              className={`w-full h-full object-cover object-center`}
-            />
-          </SwiperSlide>
-        ))}
+        {images?.map((img, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <img
+                src={img}
+                alt={`banner-${index}`}
+                className={`w-full h-full object-cover object-center`}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       <button className="button-prev hidden lg:flex lg:absolute bottom-8 left-8 z-10">
