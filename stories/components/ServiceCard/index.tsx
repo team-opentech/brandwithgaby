@@ -87,14 +87,14 @@ export const ServiceCard = ({
           {includesWithSVG}
         </div>
       </div>
-      <div className="w-full min-h-[190px] bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  rounded-b-2xl flex flex-col justify-center items-start space-y-[20px]">
-        <div className="w-full space-x-[15px] flex flex-row justify-start items-center mx-auto">
+      <div className="w-full bg-white px-[5%]   lg:px-[1.5vw]  pb-[41.412px]  rounded-b-2xl flex flex-col justify-center items-start">
+        <div className="mt-[41.412px] w-full space-x-[15px] flex flex-row justify-start items-center mx-auto">
           <img src="/clock.svg" alt="*" />
           <h4 className="text-black">{time}</h4>
         </div>
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="mt-[41.412px]  w-full flex flex-col justify-center items-center">
           <Button
-            styles="justify-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
+            styles="justify-center items-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
             label="¡Comencemos!"
             onClick={() => {
               window.location.href = `/cart/${variantId}:${quantity}`;

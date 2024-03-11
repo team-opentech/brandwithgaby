@@ -7,11 +7,9 @@ export const Navbar = () => {
     <header className="lg:px-[12svw] fixed w-screen h-[16%] max-h-[100px] bg-[#EBECE7] flex flex-row justify-between lg:justify-between items-center overscroll-x-none overflow-hidden z-50">
       {location.pathname === '/faq/' || location.pathname === '/terms' ? (
         <div
-          className={`${'rotate-90 flex flex-col justify-center items-center w-full max-w-[120px] lg:max-w-[15%]'}`}
+          className={`${' flex flex-col justify-center items-center w-full max-w-[120px] lg:max-w-[15%]'}`}
         >
-          <a href="/">
-            <DownArrow />
-          </a>
+          <a href="/">{leftArrow()}</a>
         </div>
       ) : null}
 
@@ -38,16 +36,17 @@ export const Navbar = () => {
   );
 };
 
-const DownArrow = () => {
+const leftArrow = () => {
   return (
     <svg
-      width="23"
-      height="13"
-      viewBox="0 0 23 13"
+      width="29"
+      height="23"
+      viewBox="0 0 29 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M22 1.08887L12 11.5889L1 1.08887" stroke="black" />
+      <path d="M14 22.5L1 11L14 1" stroke="black" />
+      <line x1="1" y1="11" x2="29" y2="11" stroke="black" />
     </svg>
   );
 };
