@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
 };
 export async function loader({request, context, params}: LoaderFunctionArgs) {
   // redirect to checkout
-  return redirect('/');
+  return redirect('/#PRODUCTS');
 }
 
 // export async function action({request, context}: ActionFunctionArgs) {

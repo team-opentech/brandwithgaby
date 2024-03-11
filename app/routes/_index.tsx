@@ -88,7 +88,10 @@ export default function Homepage() {
           </h4>
         </div>
       </div>
-      <div className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[13%]">
+      <div
+        id="PRODUCTS"
+        className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[13%]"
+      >
         <div className="flex flex-col space-y-[10px] justify-center items-center">
           <h1 className="hidden max-w-[342px] lg:max-w-none text-center lg:flex">
             Create your dream brand with me!
