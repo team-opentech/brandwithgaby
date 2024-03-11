@@ -44,14 +44,14 @@ export const Marquesina = ({ text }: MarquesinaProps) => {
 const Icon = () => {
   return (
     <svg
-      width="24"
+      width="164"
       height="37"
       viewBox="0 0 24 37"
       fill="none"
       className="mr-4"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="48" height="37" fill="#434343" />
+      <rect width="48" height="37" fill="black" />
     </svg>
   );
 };

@@ -56,31 +56,19 @@ export const ServiceCard = ({
   return (
     <div className="relative h-auto lg:h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col lg:mt-12">
       <img
-        src="/Service-Icon-1.svg"
+        src={index === 0 ? '/Service-Icon-1.svg' : '/Service-Icon-2.svg'}
         alt="Logo"
         className={
-          index === 0
-            ? 'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
-            : 'hidden'
+          'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
         }
       />
       <img
-        src="/Service-Icon-1.svg"
-        alt="Logo"
-        className={
-          title === 'kickstar'
-            ? 'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
-            : 'hidden'
+        src={
+          title === 'kickstar' ? '/Service-Icon-1.svg' : '/Service-Icon-2.svg'
         }
-      />
-
-      <img
-        src="/Service-Icon-2.svg"
         alt="Logo"
         className={
-          index === 1
-            ? 'hidden lg:flex absolute right-[-40%] bottom-[25%] transform translate-x-2/4 translate-y-2/4 z-10'
-            : 'hidden'
+          'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
         }
       />
       <div className="w-full bg-black rounded-t-2xl p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px] flex flex-col justify-center items-start">
@@ -104,14 +92,14 @@ export const ServiceCard = ({
           {includesWithSVG}
         </div>
       </div>
-      <div className="w-full min-h-[190px] bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  rounded-b-2xl flex flex-col justify-center items-start space-y-[20px]">
-        <div className="w-full space-x-[15px] flex flex-row justify-start items-center mx-auto">
+      <div className="w-full bg-white px-[5%]   lg:px-[1.5vw]  pb-[41.412px]  rounded-b-2xl flex flex-col justify-center items-start">
+        <div className="mt-[41.412px] w-full space-x-[15px] flex flex-row justify-start items-center mx-auto">
           <img src="/clock.svg" alt="*" />
           <h4 className="text-black">{time}</h4>
         </div>
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="mt-[41.412px]  w-full flex flex-col justify-center items-center">
           <Button
-            styles="justify-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
+            styles="justify-center items-center bg-black text-white p-3 rounded rounded-full h-12 w-full max-w-[265px] border border-solid border-black"
             label="¡Comencemos!"
             onClick={() => {
               window.location.href = `/cart/${variantId}:${quantity}`;
