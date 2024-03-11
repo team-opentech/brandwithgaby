@@ -39,8 +39,16 @@ export const Footer = () => {
         </p>
         <div className="flex flex-row justify-between w-full lg:w-[75%]">
           <a target="_blank" href="https://arquetipo.us/" rel="noreferrer">
-            <p className="text-[#656565] uppercase text-[10px] leading-[25px] underline tracking-wide font-BricolageGrotesque">
-              A SISTER COMPANY OF ARQUETIPO
+            <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide font-BricolageGrotesque">
+              A SISTER COMPANY OF &nbsp;
+              <a
+                target="_blank"
+                href="https://arquetipo.us/"
+                className="underline"
+                rel="noreferrer"
+              >
+                ARQUETIPO
+              </a>
             </p>
           </a>
           <a href="/terms">

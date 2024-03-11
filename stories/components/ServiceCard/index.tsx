@@ -68,10 +68,10 @@ export const ServiceCard = ({
         }
         alt="Logo"
         className={
-          'absolute top-[40px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
+          'absolute top-[75px] right-[20%] w-[56px] lg:hidden transform translate-x-2/4 translate-y-2/4 z-10'
         }
       />
-      <div className="w-full bg-black rounded-t-2xl p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px] flex flex-col justify-center items-start">
+      <div className="w-full min-h-[135px] bg-black rounded-t-2xl p-[5%] lg:p-0 lg:px-[1.5vw] lg:py-[20.376px] flex flex-col justify-center items-start">
         <h2 className="text-white capitalize"> {title} </h2>
         <h4 className="text-white font-light"> {subtitle}</h4>
       </div>
