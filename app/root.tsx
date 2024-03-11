@@ -21,6 +21,8 @@ import type {CustomerAccessToken} from '@shopify/hydrogen/storefront-api-types';
 import favicon from '../public/favicon.svg';
 import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
+import swiperStyles from '../node_modules/swiper/swiper.css';
+import swiperNavigationStyles from '../node_modules/swiper/modules/navigation.css';
 import {Layout} from '~/components/Layout';
 
 /**
@@ -48,6 +50,8 @@ export function links() {
   return [
     {rel: 'stylesheet', href: resetStyles},
     {rel: 'stylesheet', href: appStyles},
+    {rel: 'stylesheet', href: swiperStyles},
+    {rel: 'stylesheet', href: swiperNavigationStyles},
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
