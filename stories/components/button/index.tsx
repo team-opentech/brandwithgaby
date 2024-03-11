@@ -20,15 +20,5 @@ export const Button = ({
       <h5>{label}</h5>
       <div className={pulse ? 'pulse' : 'hidden'} />
     </button>
-    // <button
-    //   onClick={props.onClick}
-    //   className={
-    //     styles +
-    //     ' lg:hover:scale-110 hover:transition-transform duration-[500ms]'
-    //   }
-    //   {...props}
-    // >
-    //   <h5>{label}</h5>
-    // </button>
   );
 };

@@ -74,8 +74,7 @@ export default function Homepage() {
             styles="bg-black text-white font-normal font-light text-[18px] text-center px-4 py-2 rounded rounded-full h-[42px] w-full ml-[20px] lg:ml-0 max-w-[203px] border border-solid border-black mb-[6vh] lg:mb-[12vh] lowercase"
             label="@brandwithgaby"
             onClick={() =>
-              (window.location.href =
-                'https://www.instagram.com/brandwithgaby/')
+              window.open('https://www.instagram.com/brandwithgaby/', '_blank')
             }
           />
           <h4 className="text-black max-w-[331px] lg:max-w-[510px] mx-auto md:mx-0">

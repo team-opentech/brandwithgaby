@@ -1,71 +1,41 @@
 import {useEffect, useState} from 'react';
-
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 interface BannerSliderProps {
   images?: string[];
 }
 
 export const BannerSlider = ({images}: BannerSliderProps) => {
-  const [current, setCurrent] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prevCurrent) => (prevCurrent + 1) % (images?.length || 1));
-    }, 3700); // Esperamos la duración de la animación antes de cambiar a la siguiente imagen
-
-    return () => clearInterval(interval);
-  }, [current]);
-
-  useEffect(() => {
-    // Pre-cargar la primera imagen para evitar el retraso en la primera animación
-    if (images && images.length > 0) {
-      const img = new Image();
-      img.src = images[0];
-      img.onload = () => setIsLoading(false);
-    }
-  }, [images]);
-
-  const nextImageIndex = (current + 1) % (images?.length || 1);
   return (
     <div className="w-[100svw] h-[100dvh] relative overflow-hidden overscroll-x-none">
-      {images?.map((img, index) => (
-        <div key={JSON.stringify(img.split('/'))}>
-          <img
-            src={img}
-            alt={`banner-${index}`}
-            className={`w-full h-full absolute object-cover object-center transition-opacity duration-700 ease-in-out ${
-              index === current ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{zIndex: index === current ? 2 : 1}}
-          />
-          <img
-            src={images[nextImageIndex]}
-            alt={`banner-${index}`}
-            className={`hidden lg:flex w-full h-full object-cover object-left absolute -right-[70%] top-0 transition-opacity duration-[800ms] ease-in-out ${
-              index === current ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{zIndex: index === current ? 2 : 1}}
-          />
-        </div>
-      ))}
-
-      <button
-        onClick={() =>
-          setCurrent(
-            (prevCurrent) =>
-              (prevCurrent - 1 + (images?.length || 1)) % (images?.length || 1),
-          )
-        }
-        className="hidden lg:flex lg:absolute bottom-8 left-8 z-10"
+      <Swiper
+        modules={[Navigation]}
+        className="w-full h-auto"
+        navigation={{
+          nextEl: '.button-next',
+          prevEl: '.button-prev',
+        }}
+        slidesPerView={1}
+        loop={true}
+        spaceBetween={100}
       >
+        {images?.map((img, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={img}
+              alt={`banner-${index}`}
+              className={`w-full h-full object-cover object-center`}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <button className="button-prev hidden lg:flex lg:absolute bottom-8 left-8 z-10">
         {leftArrow()}
       </button>
-      <button
-        onClick={() =>
-          setCurrent((prevCurrent) => (prevCurrent + 1) % (images?.length || 1))
-        }
-        className="hidden lg:flex lg:absolute bottom-8 right-8 z-10"
-      >
+      <button className="button-next hidden lg:flex lg:absolute bottom-8 right-8 z-10">
         {righArrow()}
       </button>
 

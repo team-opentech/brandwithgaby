@@ -48,6 +48,11 @@ export const ServiceCard = ({
   const includesContent = typeof include === 'string' ? include : '';
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
+  let formattedPrice = parseFloat(price).toLocaleString('en-US', {
+    style: 'decimal',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
   return (
     <div className="relative h-auto lg:h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col lg:mt-12">
       <img
@@ -82,15 +87,15 @@ export const ServiceCard = ({
         <h2 className="text-white capitalize"> {title} </h2>
         <h4 className="text-white font-light"> {subtitle}</h4>
       </div>
-      <div className="min-h-fit lg:min-h-[235px] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
+      <div className="min-h-fit lg:min-h-[255px] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
         <div
           id="servicesLists"
           dangerouslySetInnerHTML={{__html: servicesList}}
         />
       </div>
-      <div className="w-full bg-white p-[5%] lg:px-[1.5vw] lg:py-[20.376px] lg:min-h-[215px] flex flex-col justify-center items-start border border-b-black">
+      <div className="w-full bg-white p-[5%] lg:px-[1.5vw] lg:min-h-[115px] flex flex-col justify-center items-start border border-b-black">
         <h3 className="text-black font-normal text-[26px] leading-[35px]">
-          ${price}
+          ${formattedPrice}
         </h3>
         <h4 className="text-[#9B9B9B] leading-[35px]">{dues}</h4>
       </div>
