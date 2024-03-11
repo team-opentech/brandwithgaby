@@ -89,7 +89,7 @@ export default function Homepage() {
         </div>
       </div>
       <div
-        id="PRODUCTS"
+        id="products"
         className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[13%]"
       >
         <div className="flex flex-col space-y-[10px] justify-center items-center">
