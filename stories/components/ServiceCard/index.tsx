@@ -48,7 +48,7 @@ export const ServiceCard = ({
   const includesContent = typeof include === 'string' ? include : '';
   // Parsear 'include' para transformar los elementos <li>
   const includesWithSVG = parse(includesContent, {replace: transformInclude});
-  let formattedPrice = parseFloat(price).toLocaleString('en-US', {
+  const formattedPrice = parseFloat(price).toLocaleString('en-US', {
     style: 'decimal',
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -56,7 +56,7 @@ export const ServiceCard = ({
   return (
     <div className="relative h-auto lg:h-[1053px] w-full max-w-[354px] rounded-xl lg:max-w-[419px] flex flex-col lg:mt-12">
       <img
-        src={index === 0 ? '/Service-Icon-1.svg' : '/Service-Icon-2.svg'}
+        src={index === 0 ? '/Service-Icon-1.svg' : '/Service-Icon-3.svg'}
         alt="Logo"
         className={
           'hidden lg:flex lg:absolute top-[40px] right-[20%] w-[56px] lg:w-auto lg:top-[-7%] lg:right-[18%] transform translate-x-2/4 translate-y-2/4 z-10'
@@ -64,7 +64,7 @@ export const ServiceCard = ({
       />
       <img
         src={
-          title === 'kickstar' ? '/Service-Icon-1.svg' : '/Service-Icon-2.svg'
+          title === 'kickstar' ? '/Service-Icon-1.svg' : '/Service-Icon-3.svg'
         }
         alt="Logo"
         className={
