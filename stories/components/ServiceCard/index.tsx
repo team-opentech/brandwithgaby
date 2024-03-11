@@ -93,7 +93,7 @@ export const ServiceCard = ({
         </div>
       </div>
       <div className="w-full bg-white px-[5%]   lg:px-[1.5vw]  pb-[41.412px]  rounded-b-2xl flex flex-col justify-center items-start">
-        <div className="mt-[41.412px] w-full space-x-[15px] flex flex-row justify-center items-center mx-auto">
+        <div className="mt-[41.412px] w-full space-x-[15px] flex flex-row justify-start items-center mx-auto">
           <img src="/clock.svg" alt="*" />
           <h4 className="text-black">{time}</h4>
         </div>
