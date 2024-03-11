@@ -4,7 +4,7 @@ import {useLocation} from 'react-router-dom';
 export const Navbar = () => {
   const location = useLocation();
   return (
-    <header className="lg:px-[12svw] fixed w-screen h-[16%] max-h-[100px] bg-[#EBECE7] flex flex-row justify-between lg:justify-between items-center overscroll-x-none overflow-hidden z-50">
+    <header className="lg:px-[12svw] fixed w-screen h-[16%] max-h-[100px] bg-[#EBECE7] flex flex-row justify-center lg:justify-between items-center overscroll-x-none overflow-hidden z-50">
       {location.pathname === '/faq/' || location.pathname === '/terms' ? (
         <div
           className={`${' flex flex-col justify-center items-center w-full max-w-[120px] lg:max-w-[15%]'}`}
@@ -25,7 +25,7 @@ export const Navbar = () => {
         />
       </a>
 
-      <div className={`${'rotate-180 lg:hidden w-full max-w-[120px]'}`}></div>
+      <div className={`${'rotate-180 hidden w-full max-w-[120px]'}`}></div>
 
       <Button
         styles="hidden lg:flex justify-center items-center bg-black text-white p-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black"

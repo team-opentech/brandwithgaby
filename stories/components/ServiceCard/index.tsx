@@ -75,7 +75,7 @@ export const ServiceCard = ({
         <h2 className="text-white capitalize"> {title} </h2>
         <h4 className="text-white font-light"> {subtitle}</h4>
       </div>
-      <div className="min-h-fit lg:min-h-[255px] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
+      <div className="min-h-[255px] w-full bg-white p-[5%] lg:p-0  lg:px-[1.5vw] lg:py-[20.376px]  border border-b-black flex flex-col justify-start items-start">
         <div
           id="servicesLists"
           dangerouslySetInnerHTML={{__html: servicesList}}

@@ -12,7 +12,7 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
     <div className="w-[100svw] h-[100dvh] relative overflow-hidden overscroll-x-none">
       <Swiper
         modules={[Navigation]}
-        className="w-full h-auto"
+        className="w-full h-full"
         navigation={{
           nextEl: '.button-next',
           prevEl: '.button-prev',
