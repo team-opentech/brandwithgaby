@@ -1,3 +1,9 @@
+interface InfoCardProps {
+  title: string;
+  description: string[];
+  left?: boolean;
+}
+
 export const InfoCard = ({title, description, left = true}: InfoCardProps) => {
   // Función para procesar cada descripción y convertir "arquetipo.us" en un hipervínculo
   const processDescription = (desc: string) => {

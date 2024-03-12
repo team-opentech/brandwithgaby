@@ -6,7 +6,6 @@ import type {
 import {Aside} from '~/components/Aside';
 import {Footer} from '../../stories/components/Footer';
 import {Navbar} from '../../stories/components/Navbar';
-import {CartMain} from '~/components/Cart';
 
 export type LayoutProps = {
   cart: Promise<CartApiQueryFragment | null>;

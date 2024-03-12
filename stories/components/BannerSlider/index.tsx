@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
@@ -37,7 +36,7 @@ export const BannerSlider = ({images}: BannerSliderProps) => {
       <button className="button-prev hidden lg:flex lg:absolute bottom-8 left-8 z-10">
         {leftArrow()}
       </button>
-      <button className="button-next hidden lg:flex lg:absolute bottom-8 right-8 z-10">
+      <button className="button-next hidden lg:flex lg:absolute bottom-8 right-10 z-10">
         {righArrow()}
       </button>
 

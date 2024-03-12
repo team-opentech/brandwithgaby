@@ -24,7 +24,7 @@ import appStyles from './styles/app.css';
 import swiperStyles from '../node_modules/swiper/swiper.css';
 import swiperNavigationStyles from '../node_modules/swiper/modules/navigation.css';
 import {Layout} from '~/components/Layout';
-
+import type {LinksFunction} from '@remix-run/node';
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
  */
@@ -46,7 +46,7 @@ export const shouldRevalidate: ShouldRevalidateFunction = ({
   return false;
 };
 
-export function links() {
+export const links: LinksFunction = () => {
   return [
     {rel: 'stylesheet', href: resetStyles},
     {rel: 'stylesheet', href: appStyles},
@@ -62,7 +62,7 @@ export function links() {
       href: 'https://shop.app',
     },
   ];
-}
+};
 
 /**
  * Access the result of the root loader from a React component.
