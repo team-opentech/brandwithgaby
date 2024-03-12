@@ -1,4 +1,4 @@
-import {useLayoutEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 
 interface ProyectSliderProps {
   images?: string[];
@@ -8,7 +8,7 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
   const [current, setCurrent] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prevCurrent) => (prevCurrent + 1) % (images?.length || 1));
     }, 1700); // Esperamos la duración de la animación antes de cambiar a la siguiente imagen
@@ -16,7 +16,7 @@ export const ProyectSlider = ({images}: ProyectSliderProps) => {
     return () => clearInterval(interval);
   }, [current]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // Pre-cargar la primera imagen para evitar el retraso en la primera animación
     if (images && images.length > 0) {
       const img = new Image();
