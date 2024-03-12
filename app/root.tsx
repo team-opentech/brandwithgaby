@@ -52,6 +52,7 @@ export function links() {
     {rel: 'stylesheet', href: appStyles},
     {rel: 'stylesheet', href: swiperStyles},
     {rel: 'stylesheet', href: swiperNavigationStyles},
+    {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
@@ -60,7 +61,6 @@ export function links() {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    {rel: 'icon', type: 'image/svg+xml', href: favicon},
   ];
 }
 
