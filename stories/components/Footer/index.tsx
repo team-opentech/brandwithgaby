@@ -38,7 +38,7 @@ export const Footer = () => {
           © COPYRIGHT 2024 BRANDWITHGABY. ALL RIGHTS RESERVED.
         </p>
         <div className="flex flex-row justify-between w-full lg:w-[75%]">
-          <a target="_blank" href="https://arquetipo.us/" rel="noreferrer">
+          <div>
             <p className="text-[#656565] uppercase text-[10px] leading-[25px] tracking-wide font-BricolageGrotesque">
               A SISTER COMPANY OF &nbsp;
               <a
@@ -50,7 +50,7 @@ export const Footer = () => {
                 ARQUETIPO
               </a>
             </p>
-          </a>
+          </div>
           <a href="/terms">
             <p className="text-[#656565] uppercase underline text-[10px] leading-[25px] tracking-wide cursor-pointer font-BricolageGrotesque">
               Términos y Condiciones

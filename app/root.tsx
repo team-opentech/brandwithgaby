@@ -25,6 +25,12 @@ import swiperStyles from '../node_modules/swiper/swiper.css';
 import swiperNavigationStyles from '../node_modules/swiper/modules/navigation.css';
 import {Layout} from '~/components/Layout';
 import type {LinksFunction} from '@remix-run/node';
+import {
+  HydrationProvider,
+  Server,
+  Client,
+  useHydrated,
+} from 'react-hydration-provider';
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
  */
@@ -112,11 +118,8 @@ export async function loader({context}: LoaderFunctionArgs) {
     },
   );
 }
-
-export default function App() {
-  const nonce = useNonce();
-  const data = useLoaderData<typeof loader>();
-
+function MyComponent(data: any, nonce: any) {
+  const hydrated = useHydrated();
   return (
     <html lang="en">
       <head>
@@ -134,6 +137,22 @@ export default function App() {
         <LiveReload nonce={nonce} />
       </body>
     </html>
+  );
+}
+
+export default function App() {
+  const nonce = useNonce();
+  const data = useLoaderData<typeof loader>();
+
+  return (
+    <HydrationProvider>
+      <Server>
+        <MyComponent {...data} nonce={nonce} />
+      </Server>
+      <Client>
+        <MyComponent {...data} nonce={nonce} />
+      </Client>
+    </HydrationProvider>
   );
 }
 
