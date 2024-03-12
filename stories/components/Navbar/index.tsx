@@ -4,8 +4,8 @@ import {useLocation} from 'react-router-dom';
 export const Navbar = () => {
   const location = useLocation();
   return (
-    <header
-      className={`lg:px-[12svw] fixed w-screen h-[16%] max-h-[100px] bg-[#EBECE7] flex flex-row  lg:justify-between items-center overscroll-x-none overflow-hidden z-50 ${
+    <div
+      className={`lg:px-[7%] fixed w-screen h-[16%] max-h-[100px] bg-[#EBECE7] flex flex-row  lg:justify-between items-center overscroll-x-none overflow-hidden z-50 ${
         location.pathname === '/faq/' || location.pathname === '/terms'
           ? 'justify-start'
           : 'justify-center'
@@ -25,20 +25,18 @@ export const Navbar = () => {
       )}
       <a href="/">
         <img
-          className="w-full max-w-[270px] lg:max-w-[227px]"
+          className="w-full max-w-[270px] lg:max-w-[227px] 2xl:mr-[60px]"
           src="/Navbar-LOGO.svg"
           alt="none"
         />
       </a>
-
-      <div className={`${'rotate-180 hidden w-full max-w-[120px]'}`}></div>
 
       <Button
         styles="hidden lg:flex justify-center items-center bg-black text-white p-2 rounded rounded-full h-[42px] w-full max-w-[203px] border border-solid border-black"
         label="Talk with me!"
         onClick={() => (window.location.href = 'mailto:hey@brandwithgaby.com')}
       />
-    </header>
+    </div>
   );
 };
 

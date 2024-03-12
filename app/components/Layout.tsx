@@ -1,5 +1,3 @@
-import {Await} from '@remix-run/react';
-import {Suspense} from 'react';
 import type {
   CartApiQueryFragment,
   FooterQuery,
@@ -7,7 +5,7 @@ import type {
 } from 'storefrontapi.generated';
 import {Aside} from '~/components/Aside';
 import {Footer} from '../../stories/components/Footer';
-import {Header} from '~/components/Header';
+import {Navbar} from '../../stories/components/Navbar';
 import {CartMain} from '~/components/Cart';
 
 export type LayoutProps = {
@@ -21,24 +19,23 @@ export type LayoutProps = {
 export function Layout({children = null, footer, header}: LayoutProps) {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="w-[100%]">{children}</main>
       <Footer />
-
     </>
   );
 }
 
-function CartAside({cart}: {cart: LayoutProps['cart']}) {
-  return (
-    <Aside id="cart-aside" heading="CART">
-      <Suspense fallback={<p>Loading cart ...</p>}>
-        <Await resolve={cart}>
-          {(cart) => {
-            return <CartMain cart={cart} layout="aside" />;
-          }}
-        </Await>
-      </Suspense>
-    </Aside>
-  );
-}
+// function CartAside({cart}: {cart: LayoutProps['cart']}) {
+//   return (
+//     <Aside id="cart-aside" heading="CART">
+//       <Suspense fallback={<p>Loading cart ...</p>}>
+//         <Await resolve={cart}>
+//           {(cart) => {
+//             return <CartMain cart={cart} layout="aside" />;
+//           }}
+//         </Await>
+//       </Suspense>
+//     </Aside>
+//   );
+// }
