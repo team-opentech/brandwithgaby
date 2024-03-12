@@ -1,28 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
-  <style>
-    .stroke {
-      stroke: #000;
-    }
-    .fill {
-      fill: #000;
-    }
-    @media (prefers-color-scheme: dark) {
-      .stroke {
-        stroke: #fff;
-      }
-      .fill {
-        fill: #fff;
-      }
-    }
-  </style>
-  <path
-    class="stroke"
-    fill-rule="evenodd"
-    d="M16.1 16.04 1 8.02 6.16 5.3l5.82 3.09 4.88-2.57-5.82-3.1L16.21 0l15.1 8.02-5.17 2.72-5.5-2.91-4.88 2.57 5.5 2.92-5.16 2.72Z"
-  />
-  <path
-    class="fill"
-    fill-rule="evenodd"
-    d="M16.1 32 1 23.98l5.16-2.72 5.82 3.08 4.88-2.57-5.82-3.08 5.17-2.73 15.1 8.02-5.17 2.72-5.5-2.92-4.88 2.58 5.5 2.92L16.1 32Z"
-  />
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_682_397)">
+<rect width="90" height="90" fill="white"/>
+<rect width="90" height="90" fill="black"/>
+<path d="M71.7214 44.5001C57.906 46.9261 46.9305 57.9044 44.5051 71.7233C42.0797 57.9044 31.1042 46.9261 17.2734 44.5001C31.0888 42.0741 42.0644 31.0958 44.5051 17.2769C46.9305 31.0958 57.906 42.0741 71.7214 44.5001Z" fill="#EBECE7" stroke="#EBECE7" stroke-width="0.68" stroke-miterlimit="10"/>
+<path d="M63.7508 63.7503C52.2664 55.6967 36.7427 55.6987 25.2562 63.7552C33.3127 52.2687 33.3146 36.745 25.2503 25.2497C36.7347 33.3033 52.2584 33.3013 63.7557 25.2557C55.6993 36.7421 55.6973 52.2659 63.7508 63.7503Z" fill="#EBECE7" stroke="#EBECE7" stroke-width="0.68" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_682_397">
+<rect width="90" height="90" fill="white"/>
+</clipPath>
+</defs>
 </svg>
