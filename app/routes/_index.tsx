@@ -222,7 +222,7 @@ export default function Homepage() {
         <div className="flex flex-row w-full items-center justify-center space-x-[30px] lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
           <p
-            className={`flex text-[12px] lg:text-[16px] lg:tracking-[0.7rem]   uppercase text-white`}
+            className={`flex text-[12px] leading-[46px] lg:text-[16px] uppercase text-white lg:tracking-[0.7rem] lg:font-thin font-Chakra tracking-[7px]`}
           >
             the brand of your dreams
           </p>
