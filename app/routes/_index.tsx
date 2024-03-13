@@ -34,17 +34,29 @@ export default function Homepage() {
 
   return (
     <div className="w-[100%] h-full lg:pt-[100px] overscroll-x-none overflow-hidden">
-      <BannerSlider
-        images={[
-          '/banner02.webp',
-          '/banner07.webp',
-          '/banner03.webp',
-          '/banner04.webp',
-          '/banner05.webp',
-          '/banner06.webp',
-          '/banner01.webp',
-        ]}
-      />
+      <div className="h-full w-[100%] justify-center items-center lg:hidden">
+        <BannerSlider
+          images={[
+            '/banner_m01.webp',
+            '/banner_m02.webp',
+            '/banner_m03.webp',
+            '/banner_m04.webp',
+            '/banner_m05.webp',
+          ]}
+        />
+      </div>
+      <div className="hidden h-full w-[100%] justify-center items-center lg:flex">
+        <BannerSlider
+          images={[
+            '/banner01.webp',
+            '/banner02.webp',
+            '/banner03.webp',
+            '/banner04.webp',
+            '/banner05.webp',
+          ]}
+        />
+      </div>
+
       <div className="flex h-[63px] w-full lg:w-[100svw] bg-black overflow-hidden flex-nowrap">
         <div className="flex flex-row w-full items-center justify-evenly lg:justify-center lg:space-x-[80px]">
           <img src="/STAR-v1.svg" alt="no-source" />
