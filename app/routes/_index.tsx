@@ -105,75 +105,87 @@ export default function Homepage() {
           </h4>
         </div>
         <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[20px]">
-          {data.products.nodes.map((p: any) => {
-            return (
-              <Button
-                key={p.id}
-                styles={`${
-                  p.id === projectID
-                    ? 'bg-black text-white'
-                    : 'bg-none text-black'
-                } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black capitalize`}
-                label={p.handle}
-                onClick={() => {
-                  setShow(true);
-                  setProjectID(p.id);
-                }}
-                pulse={p.id === projectID ? false : true}
-              />
-            );
-          })}
+          <Suspense fallback={<div>Loading products...</div>}>
+            <Await resolve={data.products}>
+              {data.products.nodes.map((p: any) => {
+                return (
+                  <Button
+                    key={p.id}
+                    styles={`${
+                      p.id === projectID
+                        ? 'bg-black text-white'
+                        : 'bg-none text-black'
+                    } p-2 rounded rounded-full h-10 w-full max-w-[173px] lg:max-w-[203px] border border-solid border-black capitalize`}
+                    label={p.handle}
+                    onClick={() => {
+                      setShow(true);
+                      setProjectID(p.id);
+                    }}
+                    pulse={p.id === projectID ? false : true}
+                  />
+                );
+              })}
+            </Await>
+          </Suspense>
         </div>
         <div className="h-full flex lg:hidden flex-row">
-          {data.products.nodes.map((p: any, index: number) => {
-            const descriptionHtml = p.descriptionHtml;
-            const parts = descriptionHtml.split('---split---');
-            const servicesList = parts[0];
-            const includes = parts[1];
-            return (
-              <div
-                key={p.id}
-                className={`${p.id === projectID ? 'flex' : 'hidden'}`}
-              >
-                <ServiceCard
-                  index={index}
-                  key={p.id}
-                  title={p.handle}
-                  subtitle={p.metafields[2].value}
-                  price={p.priceRange.maxVariantPrice.amount}
-                  time={p.metafields[1].value}
-                  servicesList={servicesList}
-                  dues={p.metafields[0].value}
-                  include={includes}
-                  variantId={p.variants.nodes[0].id.split('/')[4]}
-                  quantity={1}
-                />
-              </div>
-            );
-          })}
+          <Suspense fallback={<div>Loading products...</div>}>
+            <Await resolve={data.products}>
+              {data.products.nodes.map((p: any, index: number) => {
+                const descriptionHtml = p.descriptionHtml;
+                const parts = descriptionHtml.split('---split---');
+                const servicesList = parts[0];
+                const includes = parts[1];
+                return (
+                  <div
+                    key={p.id}
+                    className={`${p.id === projectID ? 'flex' : 'hidden'}`}
+                  >
+                    <ServiceCard
+                      index={index}
+                      key={p.id}
+                      title={p.handle}
+                      subtitle={p.metafields[2].value}
+                      price={p.priceRange.maxVariantPrice.amount}
+                      time={p.metafields[1].value}
+                      servicesList={servicesList}
+                      dues={p.metafields[0].value}
+                      include={includes}
+                      variantId={p.variants.nodes[0].id.split('/')[4]}
+                      quantity={1}
+                    />
+                  </div>
+                );
+              })}
+            </Await>
+          </Suspense>
         </div>
         <div className="mt-[90px] max-h-[1054px] h-full hidden lg:mt-[10%] lg:flex flex-row space-x-[80px] justify-center items-center">
-          {data.products.nodes.map((p: any, index: number) => {
-            const descriptionHtml = p.descriptionHtml;
-            const parts = descriptionHtml.split('---split---');
-            const servicesList = parts[0];
-            const includes = parts[1];
-            return (
-              <ServiceCard
-                index={index}
-                key={p.id}
-                title={p.handle}
-                subtitle={p.metafields[2].value}
-                price={p.priceRange.maxVariantPrice.amount}
-                time={p.metafields[1].value}
-                servicesList={servicesList}
-                dues={p.metafields[0].value}
-                include={includes}
-                variantId={p.variants.nodes[0].id.split('/')[4]}
-                quantity={1}
-              />
-            );
-          })}
+          <Suspense fallback={<div>Loading products...</div>}>
+            <Await resolve={data.products}>
+              {data.products.nodes.map((p: any, index: number) => {
+                const descriptionHtml = p.descriptionHtml;
+                const parts = descriptionHtml.split('---split---');
+                const servicesList = parts[0];
+                const includes = parts[1];
+                return (
+                  <ServiceCard
+                    index={index}
+                    key={p.id}
+                    title={p.handle}
+                    subtitle={p.metafields[2].value}
+                    price={p.priceRange.maxVariantPrice.amount}
+                    time={p.metafields[1].value}
+                    servicesList={servicesList}
+                    dues={p.metafields[0].value}
+                    include={includes}
+                    variantId={p.variants.nodes[0].id.split('/')[4]}
+                    quantity={1}
+                  />
+                );
+              })}
+            </Await>
+          </Suspense>
         </div>
       </div>
       <Marquesina text={Text.marquee.titles} />
@@ -239,6 +251,8 @@ export default function Homepage() {
             '/portfolio02.webp',
             '/portfolio03.webp',
             '/portfolio04.webp',
+            '/portfolio05.webp',
+            '/portfolio06.webp',
           ]}
         />
       </div>

@@ -53,14 +53,14 @@ export const links: LinksFunction = () => {
     {rel: 'stylesheet', href: swiperStyles},
     {rel: 'stylesheet', href: swiperNavigationStyles},
     {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
-    {
-      rel: 'preconnect',
-      href: 'https://cdn.shopify.com',
-    },
-    {
-      rel: 'preconnect',
-      href: 'https://shop.app',
-    },
+    // {
+    //   rel: 'preconnect',
+    //   href: 'https://cdn.shopify.com',
+    // },
+    // {
+    //   rel: 'preconnect',
+    //   href: 'https://shop.app',
+    // },
   ];
 };
 
