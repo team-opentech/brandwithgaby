@@ -23,14 +23,21 @@ export const meta: MetaFunction = () => {
 export async function loader({context}: LoaderFunctionArgs) {
   const {storefront} = context;
   const {products} = await storefront.query(PRODUCT_QUERY);
+  const sortedProducts = products.nodes.sort((a, b) => {
+    return (
+      Number(a.priceRange.maxVariantPrice.amount) -
+      Number(b.priceRange.maxVariantPrice.amount)
+    );
+  });
+  console.log("sorted products", sortedProducts);
 
-  return defer({products});
+  return defer({products: sortedProducts});
 }
 
 export default function Homepage() {
   const [show, setShow] = useState(false);
   const data = useLoaderData<typeof loader>();
-  const [projectID, setProjectID] = useState(data.products.nodes[0].id);
+  const [projectID, setProjectID] = useState(data.products[0].id);
 
   return (
     <div className="w-[100%] h-full lg:pt-[100px] overscroll-x-none overflow-hidden">
@@ -119,7 +126,7 @@ export default function Homepage() {
         <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[20px]">
           <Suspense fallback={<div>Loading products...</div>}>
             <Await resolve={data.products}>
-              {data.products.nodes.map((p: any) => {
+              {data.products.map((p: any) => {
                 return (
                   <Button
                     key={p.id}
@@ -143,7 +150,7 @@ export default function Homepage() {
         <div className="h-full flex lg:hidden flex-row">
           <Suspense fallback={<div>Loading products...</div>}>
             <Await resolve={data.products}>
-              {data.products.nodes.map((p: any, index: number) => {
+              {data.products.map((p: any, index: number) => {
                 const descriptionHtml = p.descriptionHtml;
                 const parts = descriptionHtml.split('---split---');
                 const servicesList = parts[0];
@@ -175,7 +182,7 @@ export default function Homepage() {
         <div className="mt-[90px] max-h-[1054px] h-full hidden lg:mt-[10%] lg:flex flex-row space-x-[80px] justify-center items-center">
           <Suspense fallback={<div>Loading products...</div>}>
             <Await resolve={data.products}>
-              {data.products.nodes.map((p: any, index: number) => {
+              {data.products.map((p: any, index: number) => {
                 const descriptionHtml = p.descriptionHtml;
                 const parts = descriptionHtml.split('---split---');
                 const servicesList = parts[0];
