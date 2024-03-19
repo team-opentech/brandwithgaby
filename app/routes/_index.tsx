@@ -109,7 +109,7 @@ export default function Homepage() {
       </div>
       <div
         id="products"
-        className="flex bg-[#EBECE7] w-full h-[1550px] lg:h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[13%]"
+        className="flex bg-[#EBECE7] w-full h-auto space-y-[30px] flex-col justify-center items-center pt-[8%] pb-[15%] lg:pt-[4%] lg:pb-[13%]"
       >
         <div className="flex flex-col space-y-[10px] justify-center items-center">
           <h1 className="hidden max-w-[342px] lg:max-w-none text-center lg:flex">
@@ -123,7 +123,7 @@ export default function Homepage() {
             esto te va a interesar.
           </h4>
         </div>
-        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[25px] py-[20px]">
+        <div className="lg:hidden w-full flex flex-row justify-center items-center space-x-[18px] sm:space-x-[25px] py-[20px]">
           <Suspense fallback={<div>Loading products...</div>}>
             <Await resolve={data.products}>
               {data.products.map((p: any) => {
