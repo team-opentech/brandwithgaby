@@ -2,7 +2,7 @@ export const Footer = () => {
   return (
     <footer className="flex flex-col justify-center items-center w-full h-auto bg-[#EBECE7] overflow-hidden overscroll-x-none">
       <div className="w-full h-auto py-12 px-[7%] border-y border-solid border-black lg:py-14 lg:px-0">
-        <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:px-[60px] xl:px-0 lg:mx-auto lg:justify-between 2xl:max-w-[1285px]">
+        <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:px-[5%] 2xl:px-0 lg:mx-auto lg:justify-between 2xl:max-w-[1285px]">
           <h1 className="max-sm:text-[36px] leading-[59px] tracking-wider">
             Let’s talk about it!
           </h1>
