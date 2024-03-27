@@ -62,7 +62,7 @@ export const ServiceCard = ({
       />
       <img
         src={
-          title === 'kickstar' ? '/Service-Icon-1.svg' : '/Service-Icon-3.svg'
+          title === 'kickstart' ? '/Service-Icon-1.svg' : '/Service-Icon-3.svg'
         }
         alt="Logo"
         className={
